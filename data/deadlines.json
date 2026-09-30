@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T08:24:56Z",
+ "generated": "2026-09-30T11:21:17Z",
  "venues": {
   "ARR 2026": [
    {
@@ -92,9 +92,13 @@
   ],
   "ESSLLI 2027": [
    {
-    "label": "Announcement",
-    "url": "https://digihum.ut.ee/en/news/university-tartu-host-38th-european-summer-school-logic-language-and-information-2027",
+    "label": "Website",
+    "url": "https://2027.esslli.eu/",
     "primary": true
+   },
+   {
+    "label": "Announcement",
+    "url": "https://digihum.ut.ee/en/news/university-tartu-host-38th-european-summer-school-logic-language-and-information-2027"
    }
   ],
   "Interspeech 2027": [
@@ -127,8 +131,58 @@
   ],
   "MLSS Okinawa 2027": [
    {
-    "label": "Details",
-    "url": "https://awesome-mlss.com/summerschool/mlss27",
+    "label": "Apply",
+    "url": "https://oist.github.io/mlss2027okinawa/application.html",
+    "primary": true
+   },
+   {
+    "label": "Website",
+    "url": "https://oist.github.io/mlss2027okinawa/"
+   },
+   {
+    "label": "OpenReview",
+    "url": "https://openreview.net/group?id=OIST.jp%2F2027%2FMLSS_Okinawa"
+   }
+  ],
+  "GeMSS 2027": [
+   {
+    "label": "Website",
+    "url": "https://gemss.ai/2027/",
+    "primary": true
+   }
+  ],
+  "Khipu 2027": [
+   {
+    "label": "Website",
+    "url": "https://khipu.ai/",
+    "primary": true
+   }
+  ],
+  "M2L 2027": [
+   {
+    "label": "Website",
+    "url": "https://www.m2lschool.org/home",
+    "primary": true
+   }
+  ],
+  "OxML 2027": [
+   {
+    "label": "Website",
+    "url": "https://www.oxfordml.school/",
+    "primary": true
+   }
+  ],
+  "JSALT 2027": [
+   {
+    "label": "Website",
+    "url": "https://www.clsp.jhu.edu/",
+    "primary": true
+   }
+  ],
+  "ICNLP 2027": [
+   {
+    "label": "Website & submission",
+    "url": "https://www.icnlp.net/",
     "primary": true
    }
   ]
@@ -327,17 +381,6 @@
    "link": "https://semeval.github.io/SemEval2027/"
   },
   {
-   "venue": "MLSS Okinawa",
-   "year": 2027,
-   "label": "Machine Learning Summer School",
-   "category": "school",
-   "date": null,
-   "event_dates": "Mar 1–12, 2027",
-   "place": "Onna, Okinawa, Japan",
-   "note": "Application deadline not confirmed — check site",
-   "link": "https://awesome-mlss.com/summerschool/mlss27"
-  },
-  {
    "venue": "LxMLS",
    "year": 2027,
    "label": "Lisbon Machine Learning School",
@@ -415,9 +458,9 @@
    "label": "Course & workshop proposals (final)",
    "category": "school",
    "date": "2026-10-15T23:59:00-12:00",
-   "event_dates": "Summer 2027 (two weeks)",
+   "event_dates": "Aug 2–13, 2027",
    "place": "Tartu, Estonia",
-   "note": "For proposers; student registration opens spring 2027",
+   "note": "For proposers; student registration details to be announced",
    "link": "https://digihum.ut.ee/en/news/university-tartu-host-38th-european-summer-school-logic-language-and-information-2027"
   },
   {
@@ -697,6 +740,146 @@
    "date": null,
    "note": "No dates announced yet — only the call for organisers is out",
    "link": "https://ellis.eu/"
+  },
+  {
+   "venue": "MLSS Okinawa",
+   "year": 2027,
+   "category": "school",
+   "event_dates": "Mar 1–12, 2027",
+   "place": "Onna, Okinawa, Japan",
+   "link": "https://oist.github.io/mlss2027okinawa/application.html",
+   "label": "Poster abstract deadline",
+   "date": "2026-09-30T23:59:00-12:00",
+   "note": "Apply via OpenReview · students ¥60,000, academics ¥120,000 · accommodation provided · time zone not stated (shown as AoE)"
+  },
+  {
+   "venue": "MLSS Okinawa",
+   "year": 2027,
+   "category": "school",
+   "event_dates": "Mar 1–12, 2027",
+   "place": "Onna, Okinawa, Japan",
+   "link": "https://oist.github.io/mlss2027okinawa/application.html",
+   "label": "Application deadline (CV & references)",
+   "date": "2026-10-10T23:59:00-12:00",
+   "note": "Apply via OpenReview · time zone not stated (shown as AoE)"
+  },
+  {
+   "venue": "MLSS Okinawa",
+   "year": 2027,
+   "category": "school",
+   "event_dates": "Mar 1–12, 2027",
+   "place": "Onna, Okinawa, Japan",
+   "link": "https://oist.github.io/mlss2027okinawa/application.html",
+   "label": "Acceptance notification",
+   "date": "2026-11-01T23:00:00+00:00"
+  },
+  {
+   "venue": "MLSS Okinawa",
+   "year": 2027,
+   "category": "school",
+   "event_dates": "Mar 1–12, 2027",
+   "place": "Onna, Okinawa, Japan",
+   "link": "https://oist.github.io/mlss2027okinawa/application.html",
+   "label": "Registration opens",
+   "date": "2026-11-10T01:00:00+00:00",
+   "note": "10:00 JST"
+  },
+  {
+   "venue": "MLSS Okinawa",
+   "year": 2027,
+   "category": "school",
+   "event_dates": "Mar 1–12, 2027",
+   "place": "Onna, Okinawa, Japan",
+   "link": "https://oist.github.io/mlss2027okinawa/application.html",
+   "label": "Payment deadline",
+   "date": "2026-11-30T23:59:00-12:00",
+   "note": "time zone not stated (shown as AoE)"
+  },
+  {
+   "venue": "GeMSS",
+   "year": 2027,
+   "label": "Generative Modeling Spring School — application deadline TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "Mar 15–19, 2027",
+   "place": "Madrid, Spain",
+   "note": "Deadline and fees not announced yet",
+   "link": "https://gemss.ai/2027/"
+  },
+  {
+   "venue": "Khipu",
+   "year": 2027,
+   "label": "Latin American Meeting in AI — application dates TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "Apr 5–9, 2027",
+   "place": "São Paulo, Brazil",
+   "note": "Broad ML/AI school and conference; call for workshops closes Nov 6",
+   "link": "https://khipu.ai/"
+  },
+  {
+   "venue": "M2L",
+   "year": 2027,
+   "label": "Mediterranean Machine Learning Summer School — application dates TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "Aug 30 – Sep 3, 2027",
+   "place": "Barcelona, Spain",
+   "note": "Deadline not announced yet",
+   "link": "https://www.m2lschool.org/home"
+  },
+  {
+   "venue": "OxML",
+   "year": 2027,
+   "label": "Oxford ML School — dates announced, deadlines TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "Foundation Models Jun/Jul (online) · Biomedical AI Aug 10–12 · Frontier AI Aug 13–15, 2027",
+   "place": "Oxford / online",
+   "note": "General ML, not NLP-specific",
+   "link": "https://www.oxfordml.school/"
+  },
+  {
+   "venue": "JSALT",
+   "year": 2027,
+   "label": "Jelinek Summer Workshop on Speech and Language Technology — call TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "Usually June–August",
+   "place": "Johns Hopkins / partner site",
+   "note": "2026 proposals were due mid-November 2025; 2027 call not confirmed yet",
+   "link": "https://www.clsp.jhu.edu/"
+  },
+  {
+   "venue": "ICNLP",
+   "year": 2027,
+   "label": "Paper submission deadline",
+   "category": "conference",
+   "date": "2026-11-30T23:59:00-07:00",
+   "event_dates": "Apr 16–18, 2027",
+   "place": "Zhenjiang, China",
+   "note": "Not an ACL-family venue · deadline given in PDT",
+   "link": "https://www.icnlp.net/"
+  },
+  {
+   "venue": "ICNLP",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "conference",
+   "date": "2026-12-30T23:59:00-07:00",
+   "event_dates": "Apr 16–18, 2027",
+   "place": "Zhenjiang, China",
+   "link": "https://www.icnlp.net/"
+  },
+  {
+   "venue": "ICNLP",
+   "year": 2027,
+   "label": "Camera-ready & registration",
+   "category": "conference",
+   "date": "2027-01-20T23:59:00-07:00",
+   "event_dates": "Apr 16–18, 2027",
+   "place": "Zhenjiang, China",
+   "link": "https://www.icnlp.net/"
   },
   {
    "venue": "ACL",
