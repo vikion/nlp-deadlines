@@ -6,7 +6,7 @@
 <title>NLP Deadlines</title>
 <meta name="description" content="Upcoming deadlines for NLP researchers: conferences, shared tasks, schools and funding.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Knewave&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Knewave&family=Libre+Caslon+Text&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--paper:#f5f4f0;--blue:#2545d3;--soft:rgba(37,69,211,.62);--line:rgba(37,69,211,.2);--sans:Inter,"Helvetica Neue",Arial,sans-serif;--hand:Knewave,"Comic Sans MS",cursive}
 *{box-sizing:border-box}
@@ -107,6 +107,55 @@ h1 span{display:inline}
 .intro .sub{margin:0;text-align:right;max-width:16em}
 h2.m,summary{margin-top:56px}
 @media(max-width:700px){.head{gap:10px 18px;padding:14px 0 6px}h1{font-size:1.6rem;margin-right:0;flex:1 0 100%}.search{margin-left:auto}#nav{gap:16px}.intro{margin-top:32px}.intro .sub{text-align:left}}
+
+/* sleek = editorial structure + poster colours */
+:root{--serif:"Libre Caslon Text","Times New Roman",serif}
+main{max-width:980px}
+.head{padding:22px 0 16px;border-bottom:1px solid var(--blue);gap:36px}
+h1{font-size:1.5rem}
+#nav{gap:30px}
+#nav button{font:400 .74rem/1 var(--serif);letter-spacing:.06em;color:var(--soft);padding:6px 0 8px}
+#nav button[aria-pressed=true]{color:var(--blue)}
+#nav button[aria-pressed=true]::after{left:0;right:0;height:1px;background:var(--blue);bottom:0}
+.search input{font:400 .74rem var(--serif);letter-spacing:.06em;width:100px}
+.intro{margin-top:72px;align-items:flex-end}
+.intro .sub{display:none}
+#next a{display:flex;align-items:flex-end;gap:22px;width:auto}
+#next .num{font:500 clamp(5rem,13vw,8.5rem)/.78 var(--sans);letter-spacing:-.07em;font-variant-numeric:tabular-nums}
+#next .cap{display:block;padding-bottom:3px;font:400 .74rem/1.55 var(--serif);text-transform:uppercase;letter-spacing:.06em}
+#next .cap i{display:block;font-style:normal;color:var(--soft)}
+#next .cap b{display:block;font:600 .95rem var(--sans);text-transform:none;letter-spacing:-.01em;margin-top:5px}
+#next .cap em{display:block;font-style:normal;color:var(--soft)}
+#next a:hover .cap b{text-decoration:underline;text-underline-offset:3px}
+h2.m,summary{font:500 1.15rem/1 var(--sans);letter-spacing:-.03em;text-transform:uppercase;margin:64px 0 10px}
+summary span{font:400 .74rem var(--serif);letter-spacing:.06em}
+li{grid-template-columns:84px 1fr auto;padding:20px 0;border-top:1px solid var(--line);transition:padding .25s}
+li:hover{padding-left:8px}
+li:hover .date b{transform:none}
+.date b{font:500 1.5rem/1 var(--sans);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.date.tba b{font:400 .74rem var(--serif);letter-spacing:.06em}
+.t b{font:600 .98rem var(--sans);text-transform:none;letter-spacing:-.01em}
+.w{font-weight:400}
+.d{font:400 .78rem/1.55 var(--serif);color:var(--soft);margin-top:4px}
+.tag{font:400 .68rem var(--serif);letter-spacing:.08em;margin-top:7px}
+.cd{font:400 .74rem var(--serif);text-transform:uppercase;letter-spacing:.06em;color:var(--soft)}
+.cd.soon{background:none;padding:0;color:var(--blue);font-weight:700}
+.tog{font:400 .74rem var(--serif);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--blue);margin-top:56px}
+.tog:hover{transform:none;opacity:.6}
+footer{margin-top:88px}
+footer p{font:400 .7rem/1.8 var(--serif);text-transform:uppercase;letter-spacing:.05em}
+footer .row3{display:none}
+dialog{border-radius:0;box-shadow:0 0 0 1px var(--blue),0 30px 70px -20px rgba(37,69,211,.35)}
+dialog[open]{animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+.sheet h3{font:500 clamp(2.2rem,6vw,3.2rem)/1 var(--sans);letter-spacing:-.05em;text-transform:uppercase}
+.kind,.meta,.note-aoe,.tl h4{font-family:var(--serif);font-weight:400;letter-spacing:.07em}
+.tl h4{font-size:.72rem;text-transform:uppercase;color:var(--soft)}
+.x{font:400 1.6rem var(--sans)}
+.btn{font:400 .74rem var(--serif);letter-spacing:.08em;border-radius:0;border:1px solid var(--blue)}
+.tr{font-weight:400}
+.tl h4+.tr{border-top:1px solid var(--blue)}
+@media(max-width:700px){#next .num{font-size:4.6rem}li{grid-template-columns:64px 1fr auto}.head{gap:10px 22px}#nav{gap:18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -187,7 +236,7 @@ function hero(){
   const now=Date.now(),nx=all.filter(e=>e.ts!=null&&!e.ap&&e.ts>=now&&!e.minor).sort((a,b)=>a.ts-b.ts)[0];
   if(!nx){$("next").innerHTML="";return}
   const d=Math.max(0,Math.ceil((nx.ts-now)/864e5)),k=nx.venue+" "+nx.year;
-  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}"><span class="nd">${dm(nx.ts)} — ${d} ${d===1?"day":"days"}</span><span class="nc">Next up: ${esc(k)} · ${esc(nx.label)}</span></a>`;
+  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}"><span class="num">${d}</span><span class="cap"><i>${d===1?"day":"days"} until</i><b>${esc(k)}</b><em>${esc(nx.label)}, ${dm(nx.ts)}</em></span></a>`;
   $("next").firstChild.onclick=ev=>{ev.preventDefault();open(k)};
 }
 function render(){
