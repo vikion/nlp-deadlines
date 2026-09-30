@@ -5,46 +5,63 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NLP Deadlines</title>
 <meta name="description" content="Upcoming deadlines for NLP researchers: conferences, shared tasks, schools and funding.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light;--bg:#fff;--fg:#1a1a1a;--mut:#6b6b6b;--line:#ececec;--acc:#c2410c}
+:root{color-scheme:light;--bg:#fff;--fg:#18181b;--mut:#71717a;--line:#eeeef1;--acc:#4f46e5;--tint:#eef2ff;--hot:#ea580c;--hottint:#fff1e6;--c-conference:#3b82f6;--c-shared_task:#10b981;--c-school:#8b5cf6;--c-fellowship:#f59e0b}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-main{max-width:680px;margin:0 auto;padding:56px 20px 80px}
-h1{font-size:1.5rem;font-weight:650;letter-spacing:-.01em;margin:0}
-.sub{color:var(--mut);margin:4px 0 32px;font-size:.95rem}
-nav{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:baseline;margin-bottom:8px}
-nav button{all:unset;cursor:pointer;color:var(--mut);padding:4px 0;border-bottom:2px solid transparent;font-size:.95rem}
-nav button:hover{color:var(--fg)}
-nav button[aria-pressed=true]{color:var(--fg);border-color:var(--fg)}
-nav input{margin-left:auto;border:0;border-bottom:1px solid var(--line);background:none;color:var(--fg);font:inherit;font-size:.95rem;padding:4px 0;width:140px;outline:none}
-nav input:focus{border-color:var(--fg)}
-:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:2px}
-h2{font-size:.8rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:40px 0 4px}
-ul{list-style:none;margin:0;padding:0}
-li{display:grid;grid-template-columns:56px 1fr auto;gap:0 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:720px;margin:0 auto;padding:64px 20px 88px}
+.eyebrow{display:inline-block;font-size:.75rem;font-weight:600;color:var(--acc);background:var(--tint);padding:4px 10px;border-radius:999px;letter-spacing:.02em}
+h1{font-size:2.4rem;font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:14px 0 8px}
+.sub{color:var(--mut);margin:0 0 28px;font-size:1rem;max-width:460px}
+.next{display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);border-radius:18px;padding:20px 24px;margin-bottom:28px}
+.next small{display:block;font-size:.72rem;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.next b{font-size:1.1rem;font-weight:650}.next span{color:var(--mut);font-size:.9rem}
+.next .big{font-size:2rem;font-weight:700;letter-spacing:-.02em;color:var(--acc);text-align:right;line-height:1;white-space:nowrap}
+.next .big i{display:block;font-style:normal;font-size:.72rem;font-weight:500;color:var(--mut);letter-spacing:0;margin-top:4px}
+nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+nav button{all:unset;cursor:pointer;font-size:.875rem;font-weight:500;color:var(--mut);padding:7px 14px;border-radius:999px;background:#f4f4f5;transition:.15s}
+nav button:hover{background:#e9e9ec;color:var(--fg)}
+nav button[aria-pressed=true]{background:var(--fg);color:#fff}
+nav input{margin-left:auto;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--fg);font:inherit;font-size:.875rem;padding:7px 14px;width:150px;outline:none;transition:.15s}
+nav input:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--tint)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+h2{font-size:.78rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin:36px 0 12px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+li{display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;padding:14px 18px 14px 14px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:box-shadow .15s,transform .15s}
+li:hover{box-shadow:0 6px 20px -8px rgba(24,24,27,.15);transform:translateY(-1px)}
 li.past{opacity:.5}
-time{color:var(--mut);font-variant-numeric:tabular-nums;font-size:.95rem;padding-top:1px}
-.t a{color:inherit;font-weight:600;text-decoration:none}
-.t a:hover{text-decoration:underline}
-.t .w{color:var(--fg)}
-.d{color:var(--mut);font-size:.85rem;margin-top:2px}
-.cd{color:var(--mut);font-size:.85rem;white-space:nowrap;padding-top:2px}
-.cd.soon{color:var(--acc);font-weight:600}
-details{margin-top:40px}
-summary{cursor:pointer;color:var(--mut);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.date{text-align:center;line-height:1;background:#f7f7f8;border-radius:12px;padding:8px 0}
+.date small{display:block;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:3px}
+.date b{font-size:1.3rem;font-weight:700;letter-spacing:-.02em}
+.date.tba b{font-size:.85rem;color:var(--mut)}
+.t{min-width:0}
+.t a,.t b{color:inherit;font-weight:650;text-decoration:none}
+.t a:hover{color:var(--acc)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.w{color:#3f3f46}
+.d{color:var(--mut);font-size:.83rem;margin-top:3px}
+.cd{font-size:.78rem;font-weight:600;color:var(--mut);background:#f4f4f5;padding:5px 11px;border-radius:999px;white-space:nowrap}
+.cd.soon{color:var(--hot);background:var(--hottint)}
+details{margin-top:36px}
+summary{cursor:pointer;color:var(--mut);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
 summary:hover{color:var(--fg)}
-.tog{all:unset;cursor:pointer;color:var(--mut);font-size:.85rem;margin-top:32px;display:inline-block;border-bottom:1px solid var(--line)}
-.tog:hover{color:var(--fg)}
+.tog{all:unset;cursor:pointer;color:var(--mut);font-size:.875rem;font-weight:500;margin-top:32px;display:inline-block;padding:8px 16px;border:1px solid var(--line);border-radius:999px}
+.tog:hover{color:var(--fg);border-color:#d4d4d8}
 .empty{color:var(--mut);margin-top:32px}
-footer{margin-top:56px;color:var(--mut);font-size:.8rem;line-height:1.6}
+footer{margin-top:56px;color:var(--mut);font-size:.8rem;line-height:1.7}
 footer a{color:inherit}
-@media(max-width:480px){main{padding-top:32px}li{grid-template-columns:52px 1fr}time{white-space:nowrap}.cd{grid-column:2;padding:0}nav input{margin-left:0;width:100%;order:9}}
+@media(max-width:520px){main{padding-top:36px}h1{font-size:1.9rem}li{grid-template-columns:48px 1fr;gap:12px}.cd{grid-column:2;justify-self:start}nav input{margin-left:0;width:100%;order:9}.next{flex-direction:column;align-items:flex-start}.next .big{text-align:left}}
 </style>
 </head>
 <body>
 <main>
+<span class="eyebrow">For NLP researchers</span>
 <h1>NLP Deadlines</h1>
 <p class="sub" id="sub">&nbsp;</p>
+<div id="next"></div>
 <nav id="nav" aria-label="Filter"></nav>
 <div id="list"></div>
 <button class="tog" id="tog" aria-pressed="false"></button>
@@ -55,7 +72,7 @@ const CATS={all:"All",conference:"Conferences",shared_task:"Shared tasks",school
 const MINOR=/camera|notification|workshop|proposal|show & tell|update deadline|evaluation period|tutorial|challenge|special session|satellite|open on openreview/i;
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let all=[],cat="all",full=false,q="";
-$("nav").innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-k="${k}" aria-pressed="${k==="all"}">${v}</button>`).join("")+`<input type="search" id="q" placeholder="Search" aria-label="Search">`;
+$("nav").innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-k="${k}" aria-pressed="${k==="all"}">${k==="all"?"":`<span class="dot" style="background:var(--c-${k});margin-right:6px"></span>`}${v}</button>`).join("")+`<input type="search" id="q" placeholder="Search" aria-label="Search">`;
 $("nav").onclick=e=>{const k=e.target.dataset.k;if(!k)return;cat=k;document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));render()};
 $("q").oninput=e=>{q=e.target.value.toLowerCase();render()};
 $("tog").onclick=()=>{full=!full;render()};
@@ -72,10 +89,10 @@ function cd(e){
 }
 function item(e){
   const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
-  const day=e.ts==null?"TBA":e.ap?fmt(e.ts,{month:"short"})+" ~":fmt(e.ts,{month:"short",day:"numeric"});
-  const name=`${esc(e.venue)} ${e.year}`,link=e.link?`<a href="${esc(e.link)}" target="_blank" rel="noopener">${name}</a>`:`<b>${name}</b>`;
+  const date=e.ts==null?`<div class="date tba"><b>TBA</b></div>`:`<div class="date"><small>${fmt(e.ts,{month:"short"})}</small><b>${e.ap?"~":fmt(e.ts,{day:"numeric"})}</b></div>`;
+  const name=`<span class="dot" style="background:var(--c-${e.category})"></span>${esc(e.venue)} ${e.year}`,link=e.link?`<a href="${esc(e.link)}" target="_blank" rel="noopener">${name}</a>`:`<b>${name}</b>`;
   const det=[e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
-  return `<li class="${past?"past":""}"><time>${day}</time><div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:""}</li>`;
+  return `<li class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:""}</li>`;
 }
 function render(){
   const now=Date.now();
@@ -89,6 +106,8 @@ function render(){
   }
   if(m)html+="</ul>";
   if(tba.length)html+=`<details${q||cat!=="all"?" open":""}><summary>Not announced yet (${tba.length})</summary><ul>${tba.map(item).join("")}</ul></details>`;
+  const nx=(!q&&!full)?dated.find(e=>!e.ap&&e.ts>=now):null;
+  $("next").innerHTML=nx?(()=>{const c=cd(nx);return `<div class="next"><div><small>Next deadline</small><b>${esc(nx.venue)} ${nx.year}</b> <span>${esc(nx.label)}</span><br><span>${fmt(nx.ts,{weekday:"long",month:"long",day:"numeric"})}</span></div><div class="big">${c.t.replace(" days","")}<i>${/day/.test(c.t)?"days left":""}</i></div></div>`})():"";
   $("list").innerHTML=html||`<p class="empty">Nothing matches.</p>`;
   $("tog").textContent=full?"Show key deadlines only":"Show all milestones and past dates";
 }
