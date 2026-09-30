@@ -1,0 +1,569 @@
+{
+ "note": "Hand-verified entries (checked 2026-09-29). Times are AoE (UTC-12) unless noted. Edit freely; scripts/update.py merges these with community data.",
+ "entries": [
+  {
+   "venue": "ARR",
+   "year": 2026,
+   "label": "ARR August cycle submission (for EACL 2027)",
+   "category": "conference",
+   "date": "2026-08-03T23:59:00-12:00",
+   "link": "https://aclrollingreview.org/dates"
+  },
+  {
+   "venue": "ARR",
+   "year": 2026,
+   "label": "ARR October cycle submission (for NAACL & COLING 2027)",
+   "category": "conference",
+   "date": "2026-10-12T23:59:00-12:00",
+   "link": "https://aclrollingreview.org/dates"
+  },
+  {
+   "venue": "ARR",
+   "year": 2027,
+   "label": "ARR January cycle submission (for ACL 2027)",
+   "category": "conference",
+   "date": null,
+   "note": "Announced as January 2027; exact date not yet published",
+   "link": "https://aclrollingreview.org/dates"
+  },
+  {
+   "venue": "EMNLP",
+   "year": 2026,
+   "label": "Commitment deadline",
+   "category": "conference",
+   "date": "2026-08-02T23:59:00-12:00",
+   "event_dates": "Oct 24–29, 2026",
+   "place": "Budapest, Hungary",
+   "link": "https://2026.emnlp.org/calls/main_conference_papers/"
+  },
+  {
+   "venue": "EMNLP",
+   "year": 2026,
+   "label": "Camera-ready",
+   "category": "conference",
+   "date": "2026-08-30T23:59:00-12:00",
+   "event_dates": "Oct 24–29, 2026",
+   "place": "Budapest, Hungary",
+   "link": "https://2026.emnlp.org/calls/main_conference_papers/"
+  },
+  {
+   "venue": "EACL",
+   "year": 2027,
+   "label": "Commitment deadline",
+   "category": "conference",
+   "date": "2026-10-11T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027",
+   "place": "Athens, Greece",
+   "link": "https://2027.eacl.org/calls/papers/"
+  },
+  {
+   "venue": "EACL",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "conference",
+   "date": "2026-11-12T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027",
+   "place": "Athens, Greece",
+   "link": "https://2027.eacl.org/calls/papers/"
+  },
+  {
+   "venue": "EACL",
+   "year": 2027,
+   "label": "Camera-ready",
+   "category": "conference",
+   "date": "2026-11-26T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027",
+   "place": "Athens, Greece",
+   "link": "https://2027.eacl.org/calls/papers/"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "ARR submission (Oct cycle)",
+   "category": "conference",
+   "date": "2026-10-12T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://2027.naacl.org/calls/main_conference_papers/"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "Commitment deadline",
+   "category": "conference",
+   "date": "2026-12-23T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://2027.naacl.org/calls/main_conference_papers/"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "conference",
+   "date": "2027-02-10T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://2027.naacl.org/calls/main_conference_papers/"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "Camera-ready",
+   "category": "conference",
+   "date": "2027-03-03T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://2027.naacl.org/calls/main_conference_papers/"
+  },
+  {
+   "venue": "COLING",
+   "year": 2027,
+   "label": "ARR submission (Oct cycle)",
+   "category": "conference",
+   "date": "2026-10-12T23:59:00-12:00",
+   "event_dates": "May 9–14, 2027",
+   "place": "Macau, China",
+   "link": "https://2027.coling-iccl.org/"
+  },
+  {
+   "venue": "COLING",
+   "year": 2027,
+   "label": "Commitment deadline",
+   "category": "conference",
+   "date": "2026-12-23T23:59:00-12:00",
+   "event_dates": "May 9–14, 2027",
+   "place": "Macau, China",
+   "link": "https://2027.coling-iccl.org/",
+   "note": "Dual commitment with NAACL is not allowed"
+  },
+  {
+   "venue": "ACL",
+   "year": 2027,
+   "label": "Submission / commitment",
+   "category": "conference",
+   "date": null,
+   "event_dates": "Aug 17–22, 2027",
+   "place": "Kyoto, Japan",
+   "note": "Deadlines TBA (ARR January 2027 cycle expected)",
+   "link": "https://www.aclweb.org/"
+  },
+  {
+   "venue": "RANLP",
+   "year": 2027,
+   "label": "Conference + summer school",
+   "category": "conference",
+   "date": null,
+   "event_dates": "Sep 1–10, 2027 (school Sep 1–3)",
+   "place": "Varna, Bulgaria",
+   "note": "Submission deadlines not yet published",
+   "link": "https://ranlp.org/2027/"
+  },
+  {
+   "venue": "SemEval",
+   "year": 2027,
+   "label": "Evaluation period starts",
+   "category": "shared_task",
+   "date": "2027-01-10T23:59:00-12:00",
+   "link": "https://semeval.github.io/SemEval2027/"
+  },
+  {
+   "venue": "SemEval",
+   "year": 2027,
+   "label": "Evaluation period ends",
+   "category": "shared_task",
+   "date": "2027-01-31T23:59:00-12:00",
+   "link": "https://semeval.github.io/SemEval2027/"
+  },
+  {
+   "venue": "SemEval",
+   "year": 2027,
+   "label": "System paper submission (tentative)",
+   "category": "shared_task",
+   "date": "2027-02",
+   "precision": "month",
+   "link": "https://semeval.github.io/SemEval2027/"
+  },
+  {
+   "venue": "SemEval",
+   "year": 2027,
+   "label": "Camera-ready (tentative)",
+   "category": "shared_task",
+   "date": "2027-04",
+   "precision": "month",
+   "link": "https://semeval.github.io/SemEval2027/"
+  },
+  {
+   "venue": "MLSS Okinawa",
+   "year": 2027,
+   "label": "Machine Learning Summer School",
+   "category": "school",
+   "date": null,
+   "event_dates": "Mar 1–12, 2027",
+   "place": "Onna, Okinawa, Japan",
+   "note": "Application deadline not confirmed — check site",
+   "link": "https://awesome-mlss.com/summerschool/mlss27"
+  },
+  {
+   "venue": "LxMLS",
+   "year": 2027,
+   "label": "Lisbon Machine Learning School",
+   "category": "school",
+   "date": null,
+   "event_dates": "Usually July",
+   "place": "Lisbon, Portugal",
+   "note": "2027 edition not announced yet; 2026 edition ran Jul 20–25",
+   "link": "https://lxmls.github.io/"
+  },
+  {
+   "venue": "ELLIS PhD Program",
+   "year": 2027,
+   "label": "PhD applications",
+   "category": "fellowship",
+   "date": null,
+   "note": "Usually opens in autumn with a Nov–Dec deadline — unverified, check site",
+   "link": "https://ellis.eu/phd-postdoc"
+  },
+  {
+   "venue": "Google PhD Fellowship",
+   "year": 2027,
+   "label": "Fellowship nominations",
+   "category": "fellowship",
+   "date": null,
+   "note": "Cycle timing varies by year — unverified, check site",
+   "link": "https://research.google/programs-and-events/phd-fellowship/"
+  },
+  {
+   "venue": "ALPS",
+   "year": 2027,
+   "label": "Application deadline",
+   "category": "school",
+   "date": "2026-10-11T23:59:00-12:00",
+   "event_dates": "Mar 28 – Apr 2, 2027",
+   "place": "French Alps (Centre Paul Langevin)",
+   "note": "Needs CV + cover letter; time zone not stated on site (shown as AoE). Fee ~€700 students, incl. accommodation",
+   "link": "https://lig-alps.imag.fr/index.php/application/"
+  },
+  {
+   "venue": "ALPS",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "school",
+   "date": "2026-11-13T23:59:00-12:00",
+   "event_dates": "Mar 28 – Apr 2, 2027",
+   "place": "French Alps (Centre Paul Langevin)",
+   "link": "https://lig-alps.imag.fr/"
+  },
+  {
+   "venue": "NLDL Winter School",
+   "year": 2027,
+   "label": "Northern Lights Deep Learning Winter School",
+   "category": "school",
+   "date": null,
+   "event_dates": "Usually January",
+   "place": "Tromsø, Norway",
+   "note": "2027 edition under development; no dates or deadlines yet",
+   "link": "https://www.nldl.org/program/winter-school"
+  },
+  {
+   "venue": "NLPL Winter School",
+   "year": 2027,
+   "label": "Nordic NLP winter school (NLPL / Circle U / OpenEuroLLM) — next edition TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "2026 edition: Feb 2–4, 2026",
+   "place": "Skeikampen, Norway",
+   "note": "2027 dates not announced yet — watch the NLPL site",
+   "link": "https://wiki.nlpl.eu/Community/training"
+  },
+  {
+   "venue": "ESSLLI",
+   "year": 2027,
+   "label": "Course & workshop proposals (final)",
+   "category": "school",
+   "date": "2026-10-15T23:59:00-12:00",
+   "event_dates": "Summer 2027 (two weeks)",
+   "place": "Tartu, Estonia",
+   "note": "For proposers; student registration opens spring 2027",
+   "link": "https://easychair.org/cfp/ESSLLI27"
+  },
+  {
+   "venue": "EACL",
+   "year": 2027,
+   "label": "Workshop paper deadline (default; workshops may differ)",
+   "category": "conference",
+   "date": "2026-12-15T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027",
+   "place": "Athens, Greece",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "EACL",
+   "year": 2027,
+   "label": "Workshop paper notification (default)",
+   "category": "conference",
+   "date": "2027-01-05T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027",
+   "place": "Athens, Greece",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "EACL",
+   "year": 2027,
+   "label": "Workshop camera-ready (default)",
+   "category": "conference",
+   "date": "2027-01-19T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027",
+   "place": "Athens, Greece",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "COLING",
+   "year": 2027,
+   "label": "Workshop paper deadline (default; workshops may differ)",
+   "category": "conference",
+   "date": "2027-01-05T23:59:00-12:00",
+   "event_dates": "May 9–14, 2027",
+   "place": "Macau, China",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "COLING",
+   "year": 2027,
+   "label": "Workshop paper notification (default)",
+   "category": "conference",
+   "date": "2027-02-06T23:59:00-12:00",
+   "event_dates": "May 9–14, 2027",
+   "place": "Macau, China",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "COLING",
+   "year": 2027,
+   "label": "Workshop camera-ready (default)",
+   "category": "conference",
+   "date": "2027-03-05T23:59:00-12:00",
+   "event_dates": "May 9–14, 2027",
+   "place": "Macau, China",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "Workshop paper deadline (default; workshops may differ)",
+   "category": "conference",
+   "date": "2027-02-05T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "Workshop paper notification (default)",
+   "category": "conference",
+   "date": "2027-03-26T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "NAACL",
+   "year": 2027,
+   "label": "Workshop camera-ready (default)",
+   "category": "conference",
+   "date": "2027-04-16T23:59:00-12:00",
+   "event_dates": "Jun 1–5, 2027",
+   "place": "San Francisco, USA",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "ACL",
+   "year": 2027,
+   "label": "Workshop paper deadline (default; workshops may differ)",
+   "category": "conference",
+   "date": "2027-04-25T23:59:00-12:00",
+   "event_dates": "Aug 17–22, 2027",
+   "place": "Kyoto, Japan",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "ACL",
+   "year": 2027,
+   "label": "Workshop paper notification (default)",
+   "category": "conference",
+   "date": "2027-05-22T23:59:00-12:00",
+   "event_dates": "Aug 17–22, 2027",
+   "place": "Kyoto, Japan",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "ACL",
+   "year": 2027,
+   "label": "Workshop camera-ready (default)",
+   "category": "conference",
+   "date": "2027-06-12T23:59:00-12:00",
+   "event_dates": "Aug 17–22, 2027",
+   "place": "Kyoto, Japan",
+   "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
+  },
+  {
+   "venue": "NoDaLiDa",
+   "year": 2027,
+   "label": "Workshop proposals due",
+   "category": "conference",
+   "date": "2026-11-16T23:59:00-12:00",
+   "event_dates": "May 25–28, 2027",
+   "place": "Copenhagen, Denmark",
+   "note": "Main-paper deadlines not yet announced",
+   "link": "https://www.aclweb.org/portal/content/workshop-proposals-26th-nordic-conference-computational-linguistics"
+  },
+  {
+   "venue": "NoDaLiDa",
+   "year": 2027,
+   "label": "Workshop paper submissions due",
+   "category": "conference",
+   "date": "2027-03-15T23:59:00-12:00",
+   "event_dates": "May 25–28, 2027",
+   "place": "Copenhagen, Denmark",
+   "link": "https://www.aclweb.org/portal/content/workshop-proposals-26th-nordic-conference-computational-linguistics"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Challenge proposals",
+   "category": "conference",
+   "date": "2026-11-03T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Special session proposals",
+   "category": "conference",
+   "date": "2026-11-10T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Satellite event proposals",
+   "category": "conference",
+   "date": "2027-01-08T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Tutorial proposals",
+   "category": "conference",
+   "date": "2027-02-05T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Paper submission",
+   "category": "conference",
+   "date": "2027-02-09T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Paper update deadline",
+   "category": "conference",
+   "date": "2027-02-16T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Show & Tell",
+   "category": "conference",
+   "date": "2027-03-09T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "conference",
+   "date": "2027-06-02T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "Interspeech",
+   "year": 2027,
+   "label": "Camera-ready",
+   "category": "conference",
+   "date": "2027-06-09T23:59:00-12:00",
+   "event_dates": "Aug 29 – Sep 2, 2027",
+   "place": "São Paulo, Brazil",
+   "link": "https://interspeech2027.org/"
+  },
+  {
+   "venue": "WMT",
+   "year": 2026,
+   "label": "Workshop on Machine Translation (with EMNLP; 13 shared tasks)",
+   "category": "shared_task",
+   "date": null,
+   "event_dates": "Oct 28–29, 2026",
+   "place": "Budapest, Hungary",
+   "note": "All 2026 submission deadlines have passed (camera-ready Sep 11)",
+   "link": "https://www2.statmt.org/wmt26/index.html"
+  },
+  {
+   "venue": "LREC",
+   "year": 2028,
+   "label": "Language Resources and Evaluation Conference",
+   "category": "conference",
+   "date": null,
+   "note": "No dates announced yet (next edition after LREC 2026)",
+   "link": "https://lrec-conf.org/"
+  },
+  {
+   "venue": "CoNLL",
+   "year": 2027,
+   "label": "CoNLL conference & shared task",
+   "category": "conference",
+   "date": null,
+   "note": "No dates announced yet",
+   "link": "https://conll.org/"
+  },
+  {
+   "venue": "BabyLM",
+   "year": 2027,
+   "label": "BabyLM challenge",
+   "category": "shared_task",
+   "date": null,
+   "note": "No dates announced yet",
+   "link": "https://babylm.github.io/"
+  },
+  {
+   "venue": "ELLIS Summer/Winter Schools",
+   "year": 2027,
+   "label": "ELLIS summer and winter schools",
+   "category": "school",
+   "date": null,
+   "note": "No dates announced yet — only the call for organisers is out",
+   "link": "https://ellis.eu/"
+  }
+ ]
+}
