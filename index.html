@@ -6,7 +6,7 @@
 <title>NLP Deadlines</title>
 <meta name="description" content="Upcoming deadlines for NLP researchers: conferences, shared tasks, schools and funding.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--fg:#111;--mut:#737373;--line:#e8e8e8;--fill:#f6f6f6}
 *{box-sizing:border-box}
@@ -84,47 +84,46 @@ dialog::backdrop{background:rgba(255,255,255,.75);backdrop-filter:blur(3px)}
 .notes{margin-top:18px;color:var(--mut);font-size:.85rem}
 .note-aoe{margin-top:16px;color:var(--mut);font-size:.75rem}
 
-/* whimsy */
-:root{--fg:#2b2622;--mut:#8a7f76;--line:#eadfd2;--fill:#f3ebe0;--serif:"Fraunces",Georgia,serif;--c-conference:#f2a65a;--c-shared_task:#7fb7a4;--c-school:#e58fa8;--c-fellowship:#8fa3e8}
-body{background:#fbf7f1;color:var(--fg)}
-h1,.sheet h3,.date b{font-family:var(--serif)}
-h1{font-size:2.6rem;font-weight:600;letter-spacing:-.03em;margin:64px 0 8px;position:relative;display:inline-block}
-h1::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:9px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='9' viewBox='0 0 24 9'%3E%3Cpath d='M0 5 Q6 0 12 5 T24 5' fill='none' stroke='%23f2a65a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;background-size:24px 9px}
-h1 span{display:inline-block;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
-h1 span:hover{transform:translateY(-6px) rotate(-6deg)}
-.sub{font-size:1.05rem;margin-top:18px}
-#next a{border-bottom:2px dotted #f2a65a}
-#next a:hover{border-bottom-style:solid}
-#next b{font-family:var(--serif);font-weight:600}
-.bar{background:rgba(251,247,241,.92)}
-#nav button[aria-pressed=true]{border-color:#f2a65a}
-h2.m,summary{font-family:var(--serif);font-style:italic;font-size:1.15rem;font-weight:500;color:var(--fg)}
-h2.m+ul>li:first-child,summary+ul>li:first-child{border-top-color:var(--line)}
-li{padding:16px 10px;margin:0 -10px;border-radius:14px;border-top:0;position:relative;transition:transform .3s cubic-bezier(.3,1.6,.5,1),background .2s}
-li+li::before{content:"";position:absolute;left:10px;right:10px;top:0;border-top:1px dashed var(--line)}
-li:hover{background:#fff;transform:translateX(6px) rotate(-.35deg);box-shadow:0 6px 20px -12px rgba(120,80,40,.35)}
-li:hover .t b{text-decoration:none}
-li::after{content:"";position:absolute;left:-2px;top:50%;width:7px;height:7px;border-radius:50%;background:var(--dot,#ddd);transform:translate(-100%,-50%);opacity:.9}
-li[data-cat=conference]{--dot:var(--c-conference)}li[data-cat=shared_task]{--dot:var(--c-shared_task)}li[data-cat=school]{--dot:var(--c-school)}li[data-cat=fellowship]{--dot:var(--c-fellowship)}
-.date b{font-size:1.15rem;font-weight:600}
-.cd.soon{color:#d9622b;font-weight:600}
-.btn{border-radius:999px;background:#fff;border-color:var(--line);transition:transform .25s cubic-bezier(.3,1.6,.5,1),border-color .2s}
-.btn:hover{transform:translateY(-2px) rotate(-1deg);border-color:#f2a65a}
-.btn.p{background:#2b2622;border-color:#2b2622}.btn.p:hover{background:#3d352f;border-color:#2b2622}
-dialog{border-radius:24px;background:#fffdf9;animation:none}
-dialog[open]{animation:boing .5s cubic-bezier(.3,1.5,.5,1)}
-@keyframes boing{from{opacity:0;transform:scale(.9) rotate(-1.5deg)}}
-dialog::backdrop{background:rgba(251,247,241,.8)}
-.x{background:var(--fill)}
-.tr{border-top:1px dashed var(--line)}
-.tog{border-bottom:2px dotted #f2a65a;color:var(--fg)}
-footer{border-top:1px dashed var(--line)}
-.tag{display:inline-block;margin-left:2px;animation:wave 3s ease-in-out infinite;transform-origin:70% 70%}
-@keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(14deg)}80%{transform:rotate(-8deg)}90%{transform:rotate(10deg)}}
 
-.sp{position:fixed;left:0;top:0;pointer-events:none;z-index:99;font-size:14px;line-height:1;will-change:transform,opacity;animation:sp .9s ease-out forwards}
-@keyframes sp{0%{opacity:1;transform:translate(var(--x),var(--y)) scale(.4) rotate(0)}30%{opacity:1;transform:translate(var(--x),var(--y)) scale(1) rotate(40deg)}100%{opacity:0;transform:translate(calc(var(--x) + var(--dx)),calc(var(--y) + var(--dy))) scale(.2) rotate(180deg)}}
-@media(hover:none),(prefers-reduced-motion:reduce){.sp{display:none}}
+/* clean + colour */
+:root{--fg:#0f172a;--mut:#64748b;--line:#e5e9f0;--fill:#f4f6fa;--acc:#4f46e5;--acc-s:#eef0ff;--c-conference:#4f46e5;--c-shared_task:#0d9488;--c-school:#db2777;--c-fellowship:#d97706}
+body{background:#fff;color:var(--fg)}
+h1{font-family:Inter,sans-serif;font-size:2.4rem;font-weight:700;letter-spacing:-.04em;margin:56px 0 8px;display:block}
+h1::after{display:none}
+.sub{font-size:1rem;margin-top:0}
+#next{margin-top:28px}
+#next a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:0;border-radius:12px;background:var(--acc-s);color:var(--acc);text-decoration:none;font-size:.92rem}
+#next a b{font-family:Inter,sans-serif;font-weight:600;color:var(--fg)}
+#next a span{color:var(--acc);font-weight:500}
+#next a:hover{background:#e3e6ff}
+.bar{background:rgba(255,255,255,.92)}
+#nav button[aria-pressed=true]{border-color:var(--acc);color:var(--acc)}
+h2.m,summary{font-family:Inter,sans-serif;font-style:normal;font-size:.8rem;font-weight:600;color:var(--mut);text-transform:none}
+h2.m+ul>li:first-child,summary+ul>li:first-child{border-top-color:var(--line)}
+li{padding:16px 12px;margin:0 -12px;border-radius:12px;border-top:0;position:relative;transition:background .15s;transform:none}
+li+li::before{content:"";position:absolute;left:12px;right:12px;top:0;border-top:1px solid var(--line)}
+li:hover{background:var(--fill);transform:none;box-shadow:none}
+li:hover+li::before,li:hover::before{border-color:transparent}
+li::after{display:none}
+.date b{font-family:Inter,sans-serif;font-size:1rem;font-weight:600}
+.tag{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:500;padding:2px 9px;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 11%,#fff)}
+li[data-cat=conference]{--c:var(--c-conference)}li[data-cat=shared_task]{--c:var(--c-shared_task)}li[data-cat=school]{--c:var(--c-school)}li[data-cat=fellowship]{--c:var(--c-fellowship)}
+.cd{font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--fill);color:var(--mut);font-weight:500}
+.cd.soon{background:#fff1e6;color:#c2410c;font-weight:600}
+.btn{border-radius:10px;background:#fff;border-color:var(--line);transition:border-color .2s,background .2s;transform:none}
+.btn:hover{transform:none;border-color:var(--acc);background:#fff}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}.btn.p:hover{background:#4338ca;border-color:#4338ca}
+dialog{border-radius:18px;background:#fff;animation:none}
+dialog[open]{animation:pop .22s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+dialog::backdrop{background:rgba(15,23,42,.35);backdrop-filter:blur(2px)}
+.sheet h3{font-family:Inter,sans-serif;font-size:1.9rem;font-weight:700;letter-spacing:-.035em}
+.kind{display:inline-block;color:var(--acc);font-weight:500}
+.tr{border-top:1px solid var(--line)}
+.tr.now .r,.tr.now .l{color:var(--acc)}
+.x{background:var(--fill)}
+.tog{color:var(--acc);border-bottom:0}.tog:hover{text-decoration:underline}
+footer{border-top:1px solid var(--line)}
 @media(max-width:560px){main{padding:0 20px 72px}h1{margin-top:36px}li{grid-template-columns:44px 1fr auto;gap:0 12px}.sheet{padding:26px 22px}.sheet h3{font-size:1.6rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -138,7 +137,7 @@ footer{border-top:1px dashed var(--line)}
 <div id="list"></div>
 <button class="tog" id="tog" aria-pressed="false"></button>
 <dialog id="dlg" aria-label="Event details"></dialog>
-<footer>Times are “anywhere on Earth” (UTC−12) unless noted. Always confirm on the official site.<br>Data: hand-checked + <a href="https://github.com/ccfddl/ccf-deadlines">ccf-deadlines</a>, refreshed daily. Made with a suspicious amount of coffee ☕</footer>
+<footer>Times are “anywhere on Earth” (UTC−12) unless noted. Always confirm on the official site.<br>Data: hand-checked + <a href="https://github.com/ccfddl/ccf-deadlines">ccf-deadlines</a>, refreshed daily.</footer>
 </main>
 <script>
 const CATS={all:"All",conference:"Conferences",shared_task:"Shared tasks",school:"Schools",fellowship:"Funding"};
@@ -151,12 +150,10 @@ $("q").oninput=e=>{q=e.target.value.toLowerCase();render()};
 $("tog").onclick=()=>{full=!full;render()};
 fetch("data/deadlines.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   venues=d.venues||{};all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
-  $("sub").innerHTML=TAGS[Math.floor(Math.random()*TAGS.length)]+" <small style=\"color:var(--mut)\">(updated "+d.generated.slice(0,10)+")</small>";
+  $("sub").textContent="Conferences, shared tasks, schools and funding. Updated "+d.generated.slice(0,10)+".";
   hero();render();openHash();
 }).catch(()=>{$("sub").textContent="Could not load the data. Open this page through GitHub Pages or a local web server."});
 
-const TAGS=["Things to submit, apply to, and quietly panic about.","Future you says thanks for checking early.","Conferences, schools and fellowships. Snacks not included.","Deadlines are just dates that believe in themselves.","Every paper starts as a due date."];
-$("h1").innerHTML=[..."NLP deadlines"].map(c=>c===" "?" ":`<span>${c}</span>`).join("");
 const dlg=$("dlg");
 const cats={conference:"Conference",shared_task:"Shared task",school:"School",fellowship:"Funding"};
 function open(key){
@@ -191,21 +188,21 @@ const AOE="Etc/GMT+12",fmt=(ts,o)=>new Date(ts).toLocaleDateString("en",{...o,ti
 function cd(e){
   if(e.ap)return{t:"tentative"};
   const d=Math.ceil((e.ts-Date.now())/864e5);
-  return d<0?{t:"passed"}:d===0?{t:"today!",s:1}:{t:d===1?"1 sleep":d+" sleeps",s:d<=14};
+  return d<0?{t:"passed"}:d===0?{t:"today",s:1}:{t:d===1?"tomorrow":d+" days",s:d<=14};
 }
 function item(e){
   const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
   const date=e.ts==null?`<div class="date tba"><b>TBA</b></div>`:`<div class="date"><small>${fmt(e.ts,{month:"short"})}</small><b>${e.ap?"~":fmt(e.ts,{day:"numeric"})}</b></div>`;
-  const name=`${esc(e.venue)} ${e.year}`,link=`<b>${name}</b>`;
+  const name=`${esc(e.venue)} ${e.year}`,link=`<b>${name}</b>`,tag=`<span class="tag">${{conference:"Conference",shared_task:"Shared task",school:"School",fellowship:"Funding"}[e.category]||""}</span>`;
   const det=[e.also&&"For "+e.also.map(x=>x.venue+" "+x.year+(x.place?" ("+x.place+")":"")).join(" · "),e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
-  return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" data-cat="${e.category}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:"<span></span>"}<span class="chev">›</span></li>`;
+  return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" data-cat="${e.category}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}${tag}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:"<span></span>"}<span class="chev">›</span></li>`;
 }
 
 function hero(){
   const now=Date.now(),nx=all.filter(e=>e.ts!=null&&!e.ap&&e.ts>=now&&!e.minor).sort((a,b)=>a.ts-b.ts)[0];
   if(!nx){$("next").innerHTML="";return}
   const c=cd(nx),k=nx.venue+" "+nx.year;
-  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}" data-k="${esc(k)}">Next: <b>${esc(k)}</b> ${esc(nx.label.charAt(0).toLowerCase()+nx.label.slice(1))}, ${fmt(nx.ts,{month:"long",day:"numeric"})} <span>· ${c.t==="today!"?"today, good luck":"in "+c.t} <span class=\"tag\">✦</span></span></a>`;
+  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}" data-k="${esc(k)}">Next: <b>${esc(k)}</b> ${esc(nx.label.charAt(0).toLowerCase()+nx.label.slice(1))}, ${fmt(nx.ts,{month:"long",day:"numeric"})} <span>· ${c.t==="today"||c.t==="tomorrow"?c.t:"in "+c.t} →</span></a>`;
   $("next").firstChild.onclick=ev=>{ev.preventDefault();open(k)};
 }
 function render(){
@@ -229,26 +226,6 @@ function render(){
   $("tog").textContent=full?"Show key deadlines only":"Show all milestones and past dates";
 }
 
-(()=>{
-  if(matchMedia("(hover:none)").matches||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-  const cols=["#f2a65a","#e58fa8","#8fa3e8","#7fb7a4","#f5cf5b"],shapes=["✦","✧","★","✨"];
-  let last=0,lx=0,ly=0;
-  addEventListener("mousemove",e=>{
-    const n=performance.now(),dist=Math.hypot(e.clientX-lx,e.clientY-ly);
-    if(n-last<28||dist<10)return;
-    last=n;lx=e.clientX;ly=e.clientY;
-    const el=document.createElement("span");el.className="sp";
-    el.textContent=shapes[Math.random()*shapes.length|0];
-    el.style.color=cols[Math.random()*cols.length|0];
-    el.style.fontSize=(9+Math.random()*12)+"px";
-    el.style.setProperty("--x",(e.clientX-6+(Math.random()*10-5))+"px");
-    el.style.setProperty("--y",(e.clientY-6+(Math.random()*10-5))+"px");
-    el.style.setProperty("--dx",(Math.random()*40-20)+"px");
-    el.style.setProperty("--dy",(18+Math.random()*30)+"px");
-    document.body.appendChild(el);
-    el.addEventListener("animationend",()=>el.remove());
-  },{passive:true});
-})();
 </script>
 </body>
 </html>
