@@ -141,13 +141,66 @@ dialog::backdrop{background:rgba(255,255,255,.7)}
 .tr.now .r{color:#000}
 .notes{border-radius:4px}
 @media(max-width:560px){main{padding:64px 20px 80px}.next{padding:28px;border-radius:6px}.next .big{font-size:3.4rem}.sheet{padding:36px 24px 28px}.sheet h3{font-size:2.1rem}}
+
+/* hero */
+body{background:#fff}
+.hero{position:relative;background:#000;color:#fff;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;padding:0 28px 40px}
+.glow{position:absolute;inset:-20%;background:radial-gradient(40% 35% at 25% 30%,rgba(90,110,255,.38),transparent 70%),radial-gradient(35% 30% at 75% 20%,rgba(190,90,255,.28),transparent 70%),radial-gradient(45% 35% at 55% 85%,rgba(0,170,255,.22),transparent 70%);filter:blur(30px);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(4%,3%,0) scale(1.08)}}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent);-webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent)}
+.top{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:1180px;width:100%;margin:0 auto;padding:26px 0;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.top a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}.top a:hover{color:#fff}
+.mark{font-weight:600}
+.hin{position:relative;max-width:1180px;width:100%;margin:auto;padding:56px 0 40px}
+.eyebrow{margin:0 0 20px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hero h1{font-size:clamp(3.4rem,13vw,10.5rem);font-weight:600;letter-spacing:-.065em;line-height:.92;margin:0;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hlabel{margin:22px 0 0;font-size:clamp(1rem,2vw,1.4rem);color:rgba(255,255,255,.7);letter-spacing:-.01em}
+.clock{display:flex;gap:clamp(18px,4vw,56px);margin:56px 0 0;flex-wrap:wrap}
+.clock div{min-width:0}
+.clock b{display:block;font-size:clamp(2.6rem,7vw,5.5rem);font-weight:300;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.clock i{display:block;margin-top:10px;font-style:normal;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.cta{display:flex;gap:12px;margin-top:56px;flex-wrap:wrap}
+.hb{all:unset;cursor:pointer;box-sizing:border-box;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:15px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.35);color:#fff;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.hb:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.hb.p{background:#fff;color:#000;border-color:#fff}.hb.p:hover{background:#e8e8e8;color:#000}
+.hb:active{transform:scale(.97)}
+.hero :focus-visible{outline-color:#fff}
+.soon{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1180px;width:100%;margin:0 auto}
+.sc{cursor:pointer;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:18px;padding:24px 26px;transition:background .3s,transform .5s var(--ease),border-color .3s}
+.sc:hover{background:rgba(255,255,255,.11);transform:translateY(-4px);border-color:rgba(255,255,255,.3)}
+.sc small{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.sc b{display:block;font-size:1.6rem;font-weight:500;letter-spacing:-.04em;margin:10px 0 4px}
+.sc span{font-size:.9rem;color:rgba(255,255,255,.65)}
+.hero .sub{position:relative;max-width:1180px;width:100%;margin:36px auto 0;color:rgba(255,255,255,.4);font-size:.68rem}
+.hin>*,.soon .sc{animation:up .9s var(--ease) both}
+.hin>*:nth-child(2){animation-delay:.08s}.hin>*:nth-child(3){animation-delay:.16s}.hin>*:nth-child(4){animation-delay:.24s}.hin>*:nth-child(5){animation-delay:.32s}
+.soon .sc:nth-child(2){animation-delay:.4s}.soon .sc:nth-child(3){animation-delay:.48s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}}
+main{padding-top:40px;max-width:1236px}
+.bar{top:0}
+li{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+li.in{opacity:1;transform:none}
+li.past.in{opacity:.45}
+@media(max-width:700px){.soon{grid-template-columns:1fr}.hero{padding:0 20px 28px}.clock{gap:22px}.top{padding:20px 0}}
+@media(prefers-reduced-motion:reduce){li{opacity:1;transform:none}.hin>*,.soon .sc{animation:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<main>
-<h1>NLP Deadlines</h1>
+<header class="hero">
+<div class="glow"></div><div class="grid"></div>
+<nav class="top"><span class="mark">NLP Deadlines</span><a href="https://github.com/vikion/nlp-deadlines" target="_blank" rel="noopener">GitHub ↗</a></nav>
+<div class="hin">
+<p class="eyebrow">Next deadline</p>
+<h1 id="hname">&nbsp;</h1>
+<p class="hlabel" id="hlabel"></p>
+<div class="clock" id="clock" aria-live="off"></div>
+<div class="cta"><button class="hb p" id="hopen">View details</button><button class="hb" id="hall">All deadlines ↓</button></div>
+</div>
+<div class="soon" id="soon"></div>
 <p class="sub" id="sub">&nbsp;</p>
+</header>
+<main>
 <div id="next"></div>
 <div class="bar"><div id="nav" role="group" aria-label="Filter"></div><label class="search"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><input type="search" id="q" placeholder="Search" aria-label="Search"></label></div>
 <div id="list"></div>
@@ -166,8 +219,8 @@ $("q").oninput=e=>{q=e.target.value.toLowerCase();render()};
 $("tog").onclick=()=>{full=!full;render()};
 fetch("data/deadlines.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   venues=d.venues||{};all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
-  $("sub").textContent="Conferences, shared tasks, schools and funding · updated "+d.generated.slice(0,10);
-  render();openHash();
+  $("sub").textContent="Conferences · shared tasks · schools · funding — updated "+d.generated.slice(0,10);
+  hero();render();openHash();
 }).catch(()=>{$("sub").textContent="Could not load the data. Open this page through GitHub Pages or a local web server."});
 
 const dlg=$("dlg");
@@ -214,6 +267,24 @@ function item(e){
   const det=[e.also&&"For "+e.also.map(x=>x.venue+" "+x.year+(x.place?" ("+x.place+")":"")).join(" · "),e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
   return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:"<span></span>"}<span class="chev">›</span></li>`;
 }
+
+function hero(){
+  $("hall").onclick=()=>document.querySelector(".bar").scrollIntoView({behavior:"smooth"});
+  const now=Date.now(),up=all.filter(e=>e.ts!=null&&!e.ap&&e.ts>=now&&!e.minor).sort((a,b)=>a.ts-b.ts);
+  const nx=up[0];if(!nx){$("hname").textContent="NLP Deadlines";return}
+  $("hname").textContent=nx.venue+" "+nx.year;
+  $("hlabel").textContent=nx.label+" · "+fmt(nx.ts,{weekday:"long",month:"long",day:"numeric"});
+  $("hopen").onclick=()=>open(nx.venue+" "+nx.year);
+  const seen=new Set([nx.venue+" "+nx.year]),more=[];
+  for(const e of up){const k=e.venue+" "+e.year;if(!seen.has(k)&&!(e.venue==="ARR"&&/^ARR/.test(k)&&false)){seen.add(k);more.push(e)}if(more.length===3)break}
+  $("soon").innerHTML=more.map(e=>`<div class="sc" data-k="${esc(e.venue+" "+e.year)}" tabindex="0" role="button"><small>${fmt(e.ts,{month:"short",day:"numeric"})} · ${cd(e).t}</small><b>${esc(e.venue)} ${e.year}</b><span>${esc(e.label)}</span></div>`).join("");
+  $("soon").onclick=ev=>{const c=ev.target.closest(".sc");if(c)open(c.dataset.k)};
+  const tick=()=>{let d=Math.max(0,nx.ts-Date.now());const D=Math.floor(d/864e5);d%=864e5;const H=Math.floor(d/36e5);d%=36e5;const M=Math.floor(d/6e4),S=Math.floor(d%6e4/1e3),p=n=>String(n).padStart(2,"0");
+    $("clock").innerHTML=[[D,"days"],[p(H),"hours"],[p(M),"minutes"],[p(S),"seconds"]].map(([n,l])=>`<div><b>${n}</b><i>${l}</i></div>`).join("")};
+  tick();setInterval(tick,1000);
+}
+const io="IntersectionObserver"in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{rootMargin:"0px 0px -6% 0px"}):null;
+function reveal(){document.querySelectorAll("li:not(.in)").forEach(l=>io?io.observe(l):l.classList.add("in"))}
 function render(){
   const now=Date.now();
   const f=all.filter(e=>(cat==="all"||e.category===cat)&&(!q||JSON.stringify(e).toLowerCase().includes(q))&&(full||((e.ts==null||e.ts>=now-864e5)&&!e.minor)));
@@ -231,8 +302,9 @@ function render(){
   if(m)html+="</ul>";
   if(tba.length)html+=`<details${q||cat!=="all"?" open":""}><summary>Not announced yet <span>${tba.length}</span></summary><ul>${tba.map(item).join("")}</ul></details>`;
   const nx=(!q&&!full)?dated.find(e=>!e.ap&&e.ts>=now):null;
-  $("next").innerHTML=nx?(()=>{const c=cd(nx);return `<div class="next"><div><small>Next deadline</small><h2>${esc(nx.venue)} ${nx.year}</h2><p>${esc(nx.label)} · ${fmt(nx.ts,{weekday:"long",month:"long",day:"numeric"})}</p></div><div class="big">${c.t.replace(" days","")}<i>${/day/.test(c.t)?"days left":""}</i></div></div>`})():"";
+  const _nx=nx;$("next").innerHTML=false?(()=>{const c=cd(nx);return `<div class="next"><div><small>Next deadline</small><h2>${esc(nx.venue)} ${nx.year}</h2><p>${esc(nx.label)} · ${fmt(nx.ts,{weekday:"long",month:"long",day:"numeric"})}</p></div><div class="big">${c.t.replace(" days","")}<i>${/day/.test(c.t)?"days left":""}</i></div></div>`})():"";
   $("list").innerHTML=html||`<p class="empty">Nothing matches.</p>`;
+  reveal();
   $("tog").textContent=full?"Show key deadlines only":"Show all milestones and past dates";
 }
 </script>
