@@ -110,7 +110,7 @@ $("tog").onclick=()=>{full=!full;render()};
 fetch("data/deadlines.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   venues=d.venues||{};all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
   $("sub").textContent="Conferences, shared tasks, schools and funding.";
-  $("upd").textContent="Updated "+d.generated.slice(0,10).split("-").reverse().join(".");hero();render();openHash();
+  $("upd").textContent="Updated "+d.generated.slice(0,10).split("-").reverse().join(".");hero();render();openHash();setInterval(()=>{hero();render()},60000);
 }).catch(()=>{$("sub").textContent="Could not load the data. Open this page through GitHub Pages or a local web server."});
 
 const dlg=$("dlg");
@@ -147,8 +147,13 @@ const dm=ts=>{const p=new Intl.DateTimeFormat("en",{day:"2-digit",month:"2-digit
 const AOE="Etc/GMT+12",fmt=(ts,o)=>new Date(ts).toLocaleDateString("en",{...o,timeZone:AOE});
 function cd(e){
   if(e.ap)return{t:"tentative"};
-  const d=Math.ceil((e.ts-Date.now())/864e5);
-  return d<0?{t:"passed"}:d===0?{t:"today",s:1}:{t:d===1?"tomorrow":d+" days",s:d<=14};
+  const ms=e.ts-Date.now();
+  if(ms<0)return{t:"passed"};
+  if(ms<1728e5){const h=Math.floor(ms/36e5);
+    if(h<1){const m=Math.max(1,Math.floor(ms/6e4));return{t:m+(m===1?" minute":" minutes"),s:1,h:1}}
+    return{t:h+(h===1?" hour":" hours"),s:1,h:1}}
+  const d=Math.ceil(ms/864e5);
+  return{t:d+" days",s:d<=14};
 }
 function item(e){
   const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
@@ -161,8 +166,8 @@ function item(e){
 function hero(){
   const now=Date.now(),nx=all.filter(e=>e.ts!=null&&!e.ap&&e.ts>=now&&!e.minor).sort((a,b)=>a.ts-b.ts)[0];
   if(!nx){$("next").innerHTML="";return}
-  const d=Math.max(0,Math.ceil((nx.ts-now)/864e5)),k=nx.venue+" "+nx.year;
-  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}">Next: <b>${esc(k)}</b> ${esc(nx.label.charAt(0).toLowerCase()+nx.label.slice(1))} · ${d===0?"today":d===1?"tomorrow":"in "+d+" days"} →</a>`;
+  const c=cd(nx),k=nx.venue+" "+nx.year;
+  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}">Next: <b>${esc(k)}</b> ${esc(nx.label.charAt(0).toLowerCase()+nx.label.slice(1))} · in ${c.t} →</a>`;
   $("next").firstChild.onclick=ev=>{ev.preventDefault();open(k)};
 }
 function render(){
