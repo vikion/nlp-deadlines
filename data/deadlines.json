@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T08:15:45Z",
+ "generated": "2026-09-30T08:24:56Z",
  "venues": {
   "ARR 2026": [
    {
@@ -92,8 +92,8 @@
   ],
   "ESSLLI 2027": [
    {
-    "label": "Submit a course proposal",
-    "url": "https://easychair.org/cfp/ESSLLI27",
+    "label": "Announcement",
+    "url": "https://digihum.ut.ee/en/news/university-tartu-host-38th-european-summer-school-logic-language-and-information-2027",
     "primary": true
    }
   ],
@@ -145,7 +145,7 @@
   {
    "venue": "ARR",
    "year": 2026,
-   "label": "October cycle submission (for NAACL & COLING 2027)",
+   "label": "October cycle submission",
    "category": "conference",
    "date": "2026-10-12T23:59:00-12:00",
    "link": "https://aclrollingreview.org/dates"
@@ -346,7 +346,7 @@
    "event_dates": "Usually July",
    "place": "Lisbon, Portugal",
    "note": "2027 edition not announced yet; 2026 edition ran Jul 20–25",
-   "link": "https://lxmls.github.io/"
+   "link": "https://lxmls.github.io/2026/"
   },
   {
    "venue": "ELLIS PhD Program",
@@ -418,7 +418,7 @@
    "event_dates": "Summer 2027 (two weeks)",
    "place": "Tartu, Estonia",
    "note": "For proposers; student registration opens spring 2027",
-   "link": "https://easychair.org/cfp/ESSLLI27"
+   "link": "https://digihum.ut.ee/en/news/university-tartu-host-38th-european-summer-school-logic-language-and-information-2027"
   },
   {
    "venue": "EACL",
