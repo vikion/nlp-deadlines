@@ -52,6 +52,7 @@ li.past{opacity:.4}
 .tag{display:none}
 .cd{color:var(--mut);font-size:.9rem;white-space:nowrap;font-variant-numeric:tabular-nums}
 .cd.soon{color:var(--acc)}
+.cd[data-cd],.hc{font-variant-numeric:tabular-nums;letter-spacing:.01em}
 .chev{display:none}
 .tog{all:unset;cursor:pointer;display:block;margin-top:56px;color:var(--mut);font-size:.9rem}
 .tog:hover{color:var(--ink)}
@@ -145,29 +146,29 @@ $("list").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){const 
 function openHash(){if(location.hash.length>1)open(decodeURIComponent(location.hash.slice(1)).replace(/-/g," "))}
 const dm=ts=>{const p=new Intl.DateTimeFormat("en",{day:"2-digit",month:"2-digit",timeZone:"Etc/GMT+12"}).formatToParts(ts);return p.find(x=>x.type==="day").value+"."+p.find(x=>x.type==="month").value};
 const AOE="Etc/GMT+12",fmt=(ts,o)=>new Date(ts).toLocaleDateString("en",{...o,timeZone:AOE});
+const hms=ms=>{ms=Math.max(0,ms);const p=n=>String(n).padStart(2,"0"),t=Math.floor(ms/1e3);return p(Math.floor(t/3600))+":"+p(Math.floor(t%3600/60))+":"+p(t%60)};
 function cd(e){
   if(e.ap)return{t:"tentative"};
   const ms=e.ts-Date.now();
   if(ms<0)return{t:"passed"};
-  if(ms<1728e5){const h=Math.floor(ms/36e5);
-    if(h<1){const m=Math.max(1,Math.floor(ms/6e4));return{t:m+(m===1?" minute":" minutes"),s:1,h:1}}
-    return{t:h+(h===1?" hour":" hours"),s:1,h:1}}
+  if(ms<1728e5)return{t:hms(ms),s:1,live:e.ts};
   const d=Math.ceil(ms/864e5);
   return{t:d+" days",s:d<=14};
 }
+setInterval(()=>{const n=Date.now();document.querySelectorAll("[data-cd]").forEach(el=>{const ms=+el.dataset.cd-n;if(ms>=0)el.textContent=(el.dataset.pre||"")+hms(ms)})},1000);
 function item(e){
   const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
   const date=e.ts==null?`<div class="date tba"><b>TBA</b></div>`:`<div class="date"><b>${e.ap?"~"+fmt(e.ts,{month:"short"}):fmt(e.ts,{day:"numeric",month:"short"})}</b></div>`;
   const name=`${esc(e.venue)} ${e.year}`,link=`<b>${name}</b>`,tag=`<span class="tag">${{conference:"Conference",shared_task:"Shared task",school:"School",fellowship:"Funding"}[e.category]||""}</span>`;
   const det=[e.also&&"For "+e.also.map(x=>x.venue+" "+x.year+(x.place?" ("+x.place+")":"")).join(" · "),e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
-  return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" data-cat="${e.category}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}${tag}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:"<span></span>"}<span class="chev">›</span></li>`;
+  return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" data-cat="${e.category}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}${tag}</div>${c?`<span class="cd${c.s?" soon":""}"${c.live?` data-cd="${c.live}"`:""}>${c.t}</span>`:"<span></span>"}<span class="chev">›</span></li>`;
 }
 
 function hero(){
   const now=Date.now(),nx=all.filter(e=>e.ts!=null&&!e.ap&&e.ts>=now&&!e.minor).sort((a,b)=>a.ts-b.ts)[0];
   if(!nx){$("next").innerHTML="";return}
   const c=cd(nx),k=nx.venue+" "+nx.year;
-  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}">Next: <b>${esc(k)}</b> ${esc(nx.label.charAt(0).toLowerCase()+nx.label.slice(1))} · in ${c.t} →</a>`;
+  $("next").innerHTML=`<a href="#${encodeURIComponent(k.replace(/ /g,"-"))}">Next: <b>${esc(k)}</b> ${esc(nx.label.charAt(0).toLowerCase()+nx.label.slice(1))} · ${c.live?`in <span class="hc" data-cd="${c.live}">${c.t}</span>`:"in "+c.t} →</a>`;
   $("next").firstChild.onclick=ev=>{ev.preventDefault();open(k)};
 }
 function render(){
