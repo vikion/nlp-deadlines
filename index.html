@@ -4,75 +4,94 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NLP Deadlines</title>
+<meta name="description" content="Upcoming deadlines for NLP researchers: conferences, shared tasks, schools and funding.">
 <style>
-:root{--bg:#fafaf9;--fg:#1c1917;--mut:#78716c;--card:#fff;--bd:#e7e5e4;--acc:#2563eb;--soon:#dc2626;--mid:#d97706}
-@media(prefers-color-scheme:dark){:root{--bg:#141210;--fg:#f5f5f4;--mut:#a8a29e;--card:#1c1917;--bd:#33302d;--acc:#60a5fa;--soon:#f87171;--mid:#fbbf24}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
-main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
-h1{margin:0 0 4px;font-size:1.8rem}.sub{color:var(--mut);margin:0 0 20px;font-size:.9rem}
-.bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
-input[type=search]{flex:1 1 200px;padding:8px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
-button.chip{padding:6px 12px;border:1px solid var(--bd);border-radius:999px;background:var(--card);color:var(--fg);font:inherit;font-size:.85rem;cursor:pointer}
-button.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
-label.past{font-size:.85rem;color:var(--mut);display:flex;gap:6px;align-items:center}
-h2{font-size:1rem;margin:28px 0 8px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
-.row{display:grid;grid-template-columns:130px 1fr auto;gap:12px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin-bottom:8px}
-.date{font-weight:600;font-variant-numeric:tabular-nums}.date small{display:block;font-weight:400;color:var(--mut);font-size:.75rem}
-.name a{color:var(--fg);font-weight:600;text-decoration:none}.name a:hover{color:var(--acc)}
-.meta{color:var(--mut);font-size:.85rem}
-.cd{font-size:.85rem;font-weight:600;white-space:nowrap}.cd.soon{color:var(--soon)}.cd.mid{color:var(--mid)}.cd.past{color:var(--mut);font-weight:400}
-.tag{font-size:.7rem;border:1px solid var(--bd);border-radius:4px;padding:0 5px;margin-left:6px;color:var(--mut);vertical-align:middle}
-.row.past{opacity:.55}
-@media(max-width:560px){.row{grid-template-columns:1fr;gap:2px}}
-footer{margin-top:32px;color:var(--mut);font-size:.8rem}
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#6b6b6b;--line:#ececec;--acc:#c2410c}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#ececec;--mut:#9a9a9a;--line:#262626;--acc:#fb923c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:680px;margin:0 auto;padding:56px 20px 80px}
+h1{font-size:1.5rem;font-weight:650;letter-spacing:-.01em;margin:0}
+.sub{color:var(--mut);margin:4px 0 32px;font-size:.95rem}
+nav{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:baseline;margin-bottom:8px}
+nav button{all:unset;cursor:pointer;color:var(--mut);padding:4px 0;border-bottom:2px solid transparent;font-size:.95rem}
+nav button:hover{color:var(--fg)}
+nav button[aria-pressed=true]{color:var(--fg);border-color:var(--fg)}
+nav input{margin-left:auto;border:0;border-bottom:1px solid var(--line);background:none;color:var(--fg);font:inherit;font-size:.95rem;padding:4px 0;width:140px;outline:none}
+nav input:focus{border-color:var(--fg)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:2px}
+h2{font-size:.8rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:40px 0 4px}
+ul{list-style:none;margin:0;padding:0}
+li{display:grid;grid-template-columns:56px 1fr auto;gap:0 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+li.past{opacity:.5}
+time{color:var(--mut);font-variant-numeric:tabular-nums;font-size:.95rem;padding-top:1px}
+.t a{color:inherit;font-weight:600;text-decoration:none}
+.t a:hover{text-decoration:underline}
+.t .w{color:var(--fg)}
+.d{color:var(--mut);font-size:.85rem;margin-top:2px}
+.cd{color:var(--mut);font-size:.85rem;white-space:nowrap;padding-top:2px}
+.cd.soon{color:var(--acc);font-weight:600}
+details{margin-top:40px}
+summary{cursor:pointer;color:var(--mut);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+summary:hover{color:var(--fg)}
+.tog{all:unset;cursor:pointer;color:var(--mut);font-size:.85rem;margin-top:32px;display:inline-block;border-bottom:1px solid var(--line)}
+.tog:hover{color:var(--fg)}
+.empty{color:var(--mut);margin-top:32px}
+footer{margin-top:56px;color:var(--mut);font-size:.8rem;line-height:1.6}
+footer a{color:inherit}
+@media(max-width:480px){main{padding-top:32px}li{grid-template-columns:52px 1fr}time{white-space:nowrap}.cd{grid-column:2;padding:0}nav input{margin-left:0;width:100%;order:9}}
 </style>
 </head>
 <body>
 <main>
 <h1>NLP Deadlines</h1>
-<p class="sub" id="sub">Loading…</p>
-<div class="bar">
-  <input type="search" id="q" placeholder="Search venue, place, year…" aria-label="Search">
-  <span id="chips"></span>
-  <label class="past"><input type="checkbox" id="past"> show past</label>
-</div>
+<p class="sub" id="sub">&nbsp;</p>
+<nav id="nav" aria-label="Filter"></nav>
 <div id="list"></div>
-<footer>Deadlines are AoE (UTC−12) unless noted; a deadline passes when it is midnight AoE, not in your timezone. Always confirm on the official site. Data: hand-curated + <a href="https://github.com/ccfddl/ccf-deadlines">ccf-deadlines</a>, refreshed daily.</footer>
+<button class="tog" id="tog" aria-pressed="false"></button>
+<footer>Times are “anywhere on Earth” (UTC−12) unless noted. Always confirm on the official site.<br>Data: hand-checked + <a href="https://github.com/ccfddl/ccf-deadlines">ccf-deadlines</a>, refreshed daily · <a href="https://github.com/vikion/nlp-deadlines">GitHub</a></footer>
 </main>
 <script>
-const CATS={all:"All",conference:"Conferences",shared_task:"Shared tasks",school:"Schools",fellowship:"PhD & fellowships"};
-let all=[],cat="all";
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CATS={all:"All",conference:"Conferences",shared_task:"Shared tasks",school:"Schools",fellowship:"PhD & funding"};
+const MINOR=/camera|notification|workshop|proposal|show & tell|update deadline|evaluation period|tutorial|challenge|special session|satellite|open on openreview/i;
+const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let all=[],cat="all",full=false,q="";
+$("nav").innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-k="${k}" aria-pressed="${k==="all"}">${v}</button>`).join("")+`<input type="search" id="q" placeholder="Search" aria-label="Search">`;
+$("nav").onclick=e=>{const k=e.target.dataset.k;if(!k)return;cat=k;document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));render()};
+$("q").oninput=e=>{q=e.target.value.toLowerCase();render()};
+$("tog").onclick=()=>{full=!full;render()};
 fetch("data/deadlines.json").then(r=>r.json()).then(d=>{
-  all=d.entries.map(e=>({...e,ts:e.date?new Date(e.precision==="month"?e.date+"-28T23:59:00-12:00":e.date).getTime():null}));
-  $("sub").textContent="Conferences, shared tasks, schools and fellowships for NLP researchers · updated "+d.generated.slice(0,10);
+  all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
+  $("sub").textContent="Conferences, shared tasks, schools and funding · updated "+d.generated.slice(0,10);
   render();
-}).catch(()=>{$("sub").textContent="Could not load data/deadlines.json (open via a web server or GitHub Pages)."});
-$("chips").innerHTML=Object.entries(CATS).map(([k,v])=>`<button class="chip" data-k="${k}" aria-pressed="${k==="all"}">${v}</button>`).join(" ");
-$("chips").onclick=e=>{const k=e.target.dataset.k;if(!k)return;cat=k;document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));render()};
-$("q").oninput=render;$("past").onchange=render;
-function cd(ts,approx){
-  if(approx)return{t:"tentative",c:""};
-  const d=Math.ceil((ts-Date.now())/864e5);
-  if(d<0)return{t:"passed",c:"past"};
-  if(d===0)return{t:"today",c:"soon"};
-  return{t:`${d} day${d>1?"s":""}`,c:d<=14?"soon":d<=45?"mid":""};
+}).catch(()=>{$("sub").textContent="Could not load the data. Open this page through GitHub Pages or a local web server."});
+const AOE="Etc/GMT+12",fmt=(ts,o)=>new Date(ts).toLocaleDateString("en",{...o,timeZone:AOE});
+function cd(e){
+  if(e.ap)return{t:"tentative"};
+  const d=Math.ceil((e.ts-Date.now())/864e5);
+  return d<0?{t:"passed"}:d===0?{t:"today",s:1}:{t:d===1?"tomorrow":d+" days",s:d<=14};
 }
-function row(e){
-  const approx=e.precision==="month",c=e.ts!=null?cd(e.ts,approx):null;
-  const when=e.ts==null?"TBA":approx?new Date(e.ts).toLocaleDateString("en",{month:"short",year:"numeric",timeZone:"UTC"}):new Date(e.ts).toLocaleDateString("en",{day:"numeric",month:"short",year:"numeric",timeZone:"Etc/GMT+12"});
-  const meta=[e.event_dates&&"Event: "+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
-  const name=`${esc(e.venue)} ${e.year} — ${esc(e.label)}`;
-  return `<div class="row${c&&c.c==="past"?" past":""}"><div class="date">${when}${e.ts!=null&&!approx?"<small>AoE</small>":""}</div>
-  <div class="name">${e.link?`<a href="${esc(e.link)}" target="_blank" rel="noopener">${name}</a>`:name}<span class="tag">${CATS[e.category]||""}</span><div class="meta">${esc(meta)}</div></div>
-  <div class="cd ${c?c.c:""}">${c?c.t:""}</div></div>`;
+function item(e){
+  const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
+  const day=e.ts==null?"TBA":e.ap?fmt(e.ts,{month:"short"})+" ~":fmt(e.ts,{month:"short",day:"numeric"});
+  const name=`${esc(e.venue)} ${e.year}`,link=e.link?`<a href="${esc(e.link)}" target="_blank" rel="noopener">${name}</a>`:`<b>${name}</b>`;
+  const det=[e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
+  return `<li class="${past?"past":""}"><time>${day}</time><div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:""}</li>`;
 }
 function render(){
-  const q=$("q").value.toLowerCase(),sp=$("past").checked,now=Date.now();
-  const f=all.filter(e=>(cat==="all"||e.category===cat)&&JSON.stringify(e).toLowerCase().includes(q)&&(sp||e.ts==null||e.ts>=now-864e5));
+  const now=Date.now();
+  const f=all.filter(e=>(cat==="all"||e.category===cat)&&(!q||JSON.stringify(e).toLowerCase().includes(q))&&(full||((e.ts==null||e.ts>=now-864e5)&&!e.minor)));
   const dated=f.filter(e=>e.ts!=null).sort((a,b)=>a.ts-b.ts),tba=f.filter(e=>e.ts==null);
-  $("list").innerHTML=(dated.length?"<h2>Dated</h2>"+dated.map(row).join(""):"")+(tba.length?"<h2>Date not announced / check website</h2>"+tba.map(row).join(""):"")||"<p class=meta>Nothing matches.</p>";
+  let html="",m="";
+  for(const e of dated){
+    const k=fmt(e.ts,{month:"long",year:"numeric"});
+    if(k!==m){html+=(m?"</ul>":"")+`<h2>${k}</h2><ul>`;m=k}
+    html+=item(e);
+  }
+  if(m)html+="</ul>";
+  if(tba.length)html+=`<details${q||cat!=="all"?" open":""}><summary>Not announced yet (${tba.length})</summary><ul>${tba.map(item).join("")}</ul></details>`;
+  $("list").innerHTML=html||`<p class="empty">Nothing matches.</p>`;
+  $("tog").textContent=full?"Show key deadlines only":"Show all milestones and past dates";
 }
 </script>
 </body>
