@@ -4,7 +4,7 @@
   {
    "venue": "ARR",
    "year": 2026,
-   "label": "ARR August cycle submission (for EACL 2027)",
+   "label": "August cycle submission (for EACL 2027)",
    "category": "conference",
    "date": "2026-08-03T23:59:00-12:00",
    "link": "https://aclrollingreview.org/dates"
@@ -12,7 +12,7 @@
   {
    "venue": "ARR",
    "year": 2026,
-   "label": "ARR October cycle submission (for NAACL & COLING 2027)",
+   "label": "October cycle submission (for NAACL & COLING 2027)",
    "category": "conference",
    "date": "2026-10-12T23:59:00-12:00",
    "link": "https://aclrollingreview.org/dates"
@@ -20,7 +20,7 @@
   {
    "venue": "ARR",
    "year": 2027,
-   "label": "ARR January cycle submission (for ACL 2027)",
+   "label": "January cycle submission (for ACL 2027)",
    "category": "conference",
    "date": null,
    "note": "Announced as January 2027; exact date not yet published",
@@ -241,7 +241,7 @@
    "date": "2026-10-11T23:59:00-12:00",
    "event_dates": "Mar 28 – Apr 2, 2027",
    "place": "French Alps (Centre Paul Langevin)",
-   "note": "Needs CV + cover letter; time zone not stated on site (shown as AoE). Fee ~€700 students, incl. accommodation",
+   "note": "CV + cover letter · ~€700 for students, incl. accommodation · time zone not stated (shown as AoE)",
    "link": "https://lig-alps.imag.fr/index.php/application/"
   },
   {
