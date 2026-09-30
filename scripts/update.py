@@ -30,7 +30,8 @@ def fetch(name):
         print(f"skip {name}: {e}", file=sys.stderr); return None
 
 def main():
-    curated = json.loads((ROOT / "data/curated.json").read_text())["entries"]
+    cur = json.loads((ROOT / "data/curated.json").read_text())
+    curated = cur["entries"]
     have = {(e["venue"], e["year"]) for e in curated}
     out = list(curated)
     for fname, venue in VENUES.items():
@@ -50,7 +51,7 @@ def main():
                         "event_dates": c.get("date"), "place": c.get("place"),
                         "link": c.get("link"), "source": "ccf-deadlines"})
     (ROOT / "data/deadlines.json").write_text(json.dumps(
-        {"generated": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z", "entries": out},
+        {"generated": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z", "venues": cur.get("venues", {}), "entries": out},
         indent=1, ensure_ascii=False))
     print(f"wrote {len(out)} entries")
 
