@@ -100,7 +100,7 @@ $("nav").innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-k="${k}" aria
 $("nav").onclick=e=>{const k=e.target.dataset.k;if(!k)return;cat=k;document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));render()};
 $("q").oninput=e=>{q=e.target.value.toLowerCase();render()};
 $("tog").onclick=()=>{full=!full;render()};
-fetch("data/deadlines.json").then(r=>r.json()).then(d=>{
+fetch("data/deadlines.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   venues=d.venues||{};all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
   $("sub").textContent="Conferences, shared tasks, schools and funding · updated "+d.generated.slice(0,10);
   render();openHash();
@@ -147,13 +147,17 @@ function item(e){
   const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
   const date=e.ts==null?`<div class="date tba"><b>TBA</b></div>`:`<div class="date"><small>${fmt(e.ts,{month:"short"})}</small><b>${e.ap?"~":fmt(e.ts,{day:"numeric"})}</b></div>`;
   const name=`<span class="dot" style="background:var(--c-${e.category})"></span>${esc(e.venue)} ${e.year}`,link=`<b>${name}</b>`;
-  const det=[e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
+  const det=[e.also&&"For "+e.also.map(x=>x.venue+" "+x.year+(x.place?" ("+x.place+")":"")).join(" · "),e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
   return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:""}</li>`;
 }
 function render(){
   const now=Date.now();
   const f=all.filter(e=>(cat==="all"||e.category===cat)&&(!q||JSON.stringify(e).toLowerCase().includes(q))&&(full||((e.ts==null||e.ts>=now-864e5)&&!e.minor)));
   const dated=f.filter(e=>e.ts!=null).sort((a,b)=>a.ts-b.ts),tba=f.filter(e=>e.ts==null);
+  const arr=dated.filter(e=>e.venue==="ARR"&&/submission/i.test(e.label));
+  const dup=e=>e.venue!=="ARR"&&/^ARR submission/i.test(e.label)&&arr.some(a=>a.ts===e.ts);
+  arr.forEach(a=>a.also=dated.filter(e=>dup(e)&&e.ts===a.ts));
+  dated.splice(0,dated.length,...dated.filter(e=>!dup(e)));
   let html="",m="";
   for(const e of dated){
     const k=fmt(e.ts,{month:"long",year:"numeric"});
