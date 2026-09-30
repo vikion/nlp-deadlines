@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30T11:21:17Z",
+ "generated": "2026-09-30T11:25:20Z",
  "venues": {
   "ARR 2026": [
    {
@@ -183,6 +183,55 @@
    {
     "label": "Website & submission",
     "url": "https://www.icnlp.net/",
+    "primary": true
+   }
+  ],
+  "ICLC18 2027": [
+   {
+    "label": "Submit abstract",
+    "url": "https://www.iclc18.fau.de/",
+    "primary": true
+   }
+  ],
+  "CogSci 2027": [
+   {
+    "label": "Website",
+    "url": "https://cognitivesciencesociety.org/cogsci-2027/",
+    "primary": true
+   }
+  ],
+  "Constructed Meanings 2026": [
+   {
+    "label": "Event listing",
+    "url": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences/",
+    "primary": true
+   }
+  ],
+  "Amsterdam Colloquium 2026": [
+   {
+    "label": "Event listing",
+    "url": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences/",
+    "primary": true
+   }
+  ],
+  "LOT Winter School 2027": [
+   {
+    "label": "Website",
+    "url": "https://lotschool.nl/events/lot-winter-school-2027/",
+    "primary": true
+   }
+  ],
+  "LSA Linguistic Institute 2027": [
+   {
+    "label": "Register",
+    "url": "https://center.uoregon.edu/LSA/2027/",
+    "primary": true
+   }
+  ],
+  "IPrA 2027": [
+   {
+    "label": "Submit abstract",
+    "url": "https://ipra2027.exordo.com/",
     "primary": true
    }
   ]
@@ -880,6 +929,105 @@
    "event_dates": "Apr 16–18, 2027",
    "place": "Zhenjiang, China",
    "link": "https://www.icnlp.net/"
+  },
+  {
+   "venue": "ICLC18",
+   "year": 2027,
+   "label": "Abstract submission deadline",
+   "category": "conference",
+   "date": "2026-12-01T23:59:00-12:00",
+   "event_dates": "Aug 20–24, 2027",
+   "place": "Erlangen, Germany",
+   "note": "International Cognitive Linguistics Conference · time zone not stated (shown as AoE)",
+   "link": "https://www.iclc18.fau.de/"
+  },
+  {
+   "venue": "ICLC18",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "conference",
+   "date": "2027-03-15T23:59:00-12:00",
+   "event_dates": "Aug 20–24, 2027",
+   "place": "Erlangen, Germany",
+   "note": "Approximate",
+   "link": "https://www.iclc18.fau.de/"
+  },
+  {
+   "venue": "IPrA",
+   "year": 2027,
+   "label": "Poster & lecture abstracts deadline",
+   "category": "conference",
+   "date": "2026-10-15T23:59:00-12:00",
+   "event_dates": "Jun 27 – Jul 2, 2027",
+   "place": "Helsinki, Finland",
+   "note": "International Pragmatics Conference · contributions to accepted panels also due Oct 15 · time zone not stated (shown as AoE)",
+   "link": "https://ipra2027.exordo.com/"
+  },
+  {
+   "venue": "CogSci",
+   "year": 2027,
+   "label": "Cognitive Science Society annual meeting — submission dates TBA",
+   "category": "conference",
+   "date": null,
+   "event_dates": "Jul 28–31, 2027",
+   "place": "Bilbao, Spain",
+   "note": "Submission deadlines not published yet",
+   "link": "https://cognitivesciencesociety.org/cogsci-2027/"
+  },
+  {
+   "venue": "Constructed Meanings",
+   "year": 2026,
+   "label": "Abstract deadline (MA & PhD students)",
+   "category": "conference",
+   "date": "2026-10-15T23:59:00-12:00",
+   "event_dates": "Dec 15, 2026",
+   "place": "Amsterdam (ILLC)",
+   "note": "Workshop on AI and meaning · anonymised abstract, max 2 pages, by email · time zone not stated (shown as AoE)",
+   "link": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences/"
+  },
+  {
+   "venue": "Amsterdam Colloquium",
+   "year": 2026,
+   "label": "25th Amsterdam Colloquium (semantics & logic)",
+   "category": "conference",
+   "date": "2026-12-18T23:59:00-12:00",
+   "event_dates": "Dec 18–20, 2026",
+   "place": "Amsterdam, Netherlands",
+   "note": "Event dates — submission deadline has passed",
+   "link": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences/"
+  },
+  {
+   "venue": "LOT Winter School",
+   "year": 2027,
+   "label": "Linguistics winter school — registration dates TBA",
+   "category": "school",
+   "date": null,
+   "event_dates": "Jan 11–22, 2027",
+   "place": "Amsterdam, Netherlands",
+   "note": "Preliminary programme out; registration details coming",
+   "link": "https://lotschool.nl/events/lot-winter-school-2027/"
+  },
+  {
+   "venue": "LSA Linguistic Institute",
+   "year": 2027,
+   "label": "Registration opens",
+   "category": "school",
+   "date": "2027-02-01T00:00:00-12:00",
+   "event_dates": "Jun 27 – Jul 23, 2027",
+   "place": "Eugene, Oregon, USA",
+   "note": "Theme: The Dynamics of Language · $1,600 per term, $2,500 full · LSA fellowships for student members",
+   "link": "https://center.uoregon.edu/LSA/2027/"
+  },
+  {
+   "venue": "LSA Linguistic Institute",
+   "year": 2027,
+   "label": "Registration closes",
+   "category": "school",
+   "date": "2027-06-04T23:59:00-12:00",
+   "event_dates": "Jun 27 – Jul 23, 2027",
+   "place": "Eugene, Oregon, USA",
+   "note": "time zone not stated (shown as AoE)",
+   "link": "https://center.uoregon.edu/LSA/2027/"
   },
   {
    "venue": "ACL",
