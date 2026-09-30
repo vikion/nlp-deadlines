@@ -91,16 +91,29 @@ dialog::backdrop{background:rgba(245,244,240,.8);backdrop-filter:blur(4px)}
 .notes{margin-top:18px;color:var(--soft);font-size:.85rem}
 .note-aoe{margin-top:16px;color:var(--soft);font:800 .62rem var(--sans);text-transform:uppercase}
 @media(max-width:600px){main{padding:0 18px 32px}.bar{margin-top:64px}li{grid-template-columns:86px 1fr auto;gap:0 10px}.date b{font-size:1.5rem}.sheet{padding:28px 22px}.row3 .lab:nth-child(2){text-align:center}}
+
+/* compact header */
+main{padding-top:0}
+.head{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:18px 0 14px;background:var(--paper);border-bottom:2px solid var(--blue)}
+h1{font:400 1.9rem/1 var(--hand);margin:0;transform:rotate(-2deg);letter-spacing:-.01em;white-space:nowrap;margin-right:auto}
+h1 span{display:inline}
+#nav{gap:22px}
+#nav button{padding:6px 0 9px;font-size:.68rem}
+.search input{width:110px;font-size:.68rem}
+.bar{display:none}
+.intro{margin-top:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+#next{margin:0}
+#next .nd{font-size:clamp(2rem,5vw,3.2rem)}
+.intro .sub{margin:0;text-align:right;max-width:16em}
+h2.m,summary{margin-top:56px}
+@media(max-width:700px){.head{gap:10px 18px;padding:14px 0 6px}h1{font-size:1.6rem;margin-right:0;flex:1 0 100%}.search{margin-left:auto}#nav{gap:16px}.intro{margin-top:32px}.intro .sub{text-align:left}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <main>
-<div class="row3"><span class="lab">NLP<br>Deadlines</span><span class="lab">NLP<br>Deadlines</span><span class="lab">NLP<br>Deadlines</span></div>
-<h1><span>NLP</span><span>Deadlines</span></h1>
-<p class="sub lab" id="sub">&nbsp;</p>
-<div id="next"></div>
-<div class="bar"><div id="nav" role="group" aria-label="Filter"></div><label class="search"><svg viewBox="0 0 16 16"></svg><input type="search" id="q" placeholder="Search" aria-label="Search"></label></div>
+<header class="head"><h1>NLP Deadlines</h1><div id="nav" role="group" aria-label="Filter"></div><label class="search"><svg viewBox="0 0 16 16"></svg><input type="search" id="q" placeholder="Search" aria-label="Search"></label></header>
+<div class="intro"><div id="next"></div><p class="sub lab" id="sub">&nbsp;</p></div>
 <div id="list"></div>
 <button class="tog" id="tog" aria-pressed="false"></button>
 <dialog id="dlg" aria-label="Event details"></dialog>
