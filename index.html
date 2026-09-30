@@ -15,7 +15,7 @@ main{max-width:720px;margin:0 auto;padding:64px 20px 88px}
 .eyebrow{display:inline-block;font-size:.75rem;font-weight:600;color:var(--acc);background:var(--tint);padding:4px 10px;border-radius:999px;letter-spacing:.02em}
 h1{font-size:2.4rem;font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:14px 0 8px}
 .sub{color:var(--mut);margin:0 0 28px;font-size:1rem;max-width:460px}
-.next{display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);border-radius:18px;padding:20px 24px;margin-bottom:28px}
+.next{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(135deg,#eef2ff,#f5f3ff);border-radius:18px;padding:20px 24px;margin-bottom:28px}
 .next small{display:block;font-size:.72rem;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
 .next b{font-size:1.1rem;font-weight:650}.next span{color:var(--mut);font-size:.9rem}
 .next .big{font-size:2rem;font-weight:700;letter-spacing:-.02em;color:var(--acc);text-align:right;line-height:1;white-space:nowrap}
@@ -54,6 +54,29 @@ summary:hover{color:var(--fg)}
 footer{margin-top:56px;color:var(--mut);font-size:.8rem;line-height:1.7}
 footer a{color:inherit}
 @media(max-width:520px){main{padding-top:36px}h1{font-size:1.9rem}li{grid-template-columns:48px 1fr;gap:12px}.cd{grid-column:2;justify-self:start}nav input{margin-left:0;width:100%;order:9}.next{flex-direction:column;align-items:flex-start}.next .big{text-align:left}}
+li{cursor:pointer}
+dialog{border:0;border-radius:22px;padding:0;width:min(560px,calc(100vw - 24px));max-height:calc(100vh - 48px);color:var(--fg);background:#fff;box-shadow:0 30px 80px -20px rgba(24,24,27,.35)}
+dialog::backdrop{background:rgba(24,24,27,.35);backdrop-filter:blur(2px)}
+.sheet{padding:28px 28px 24px;overflow:auto;max-height:calc(100vh - 48px)}
+.x{all:unset;cursor:pointer;position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:#f4f4f5;display:grid;place-items:center;font-size:1.1rem;color:var(--mut)}
+.x:hover{background:#e9e9ec;color:var(--fg)}
+.sheet h3{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin:6px 0 4px;padding-right:36px}
+.kind{font-size:.78rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.meta{color:var(--mut);font-size:.92rem}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px}
+.btn{font-size:.9rem;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;border:1px solid var(--line);color:var(--fg);transition:.15s}
+.btn:hover{border-color:#d4d4d8;background:#fafafa}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.p:hover{background:#4338ca}
+.tl{margin:22px 0 0;display:grid;gap:0}
+.tl h4{font-size:.75rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+.tr{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:.92rem}
+.tr .l{color:#3f3f46}.tr .r{color:var(--mut);white-space:nowrap;font-size:.85rem}
+.tr.now{font-weight:600}.tr.now .l{color:var(--fg)}.tr.now .r{color:var(--acc)}
+.tr.gone{opacity:.45}
+.notes{margin-top:16px;padding:12px 14px;border-radius:12px;background:#f7f7f8;color:#52525b;font-size:.85rem}
+.note-aoe{margin-top:14px;color:var(--mut);font-size:.75rem}
+@media(max-width:520px){.sheet{padding:24px 20px 20px}}
 </style>
 </head>
 <body>
@@ -65,22 +88,55 @@ footer a{color:inherit}
 <nav id="nav" aria-label="Filter"></nav>
 <div id="list"></div>
 <button class="tog" id="tog" aria-pressed="false"></button>
+<dialog id="dlg" aria-label="Event details"></dialog>
 <footer>Times are “anywhere on Earth” (UTC−12) unless noted. Always confirm on the official site.<br>Data: hand-checked + <a href="https://github.com/ccfddl/ccf-deadlines">ccf-deadlines</a>, refreshed daily · <a href="https://github.com/vikion/nlp-deadlines">GitHub</a></footer>
 </main>
 <script>
 const CATS={all:"All",conference:"Conferences",shared_task:"Shared tasks",school:"Schools",fellowship:"PhD & funding"};
 const MINOR=/camera|notification|workshop|proposal|show & tell|update deadline|evaluation period|tutorial|challenge|special session|satellite|open on openreview/i;
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let all=[],cat="all",full=false,q="";
+let all=[],cat="all",full=false,q="",venues={};
 $("nav").innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-k="${k}" aria-pressed="${k==="all"}">${k==="all"?"":`<span class="dot" style="background:var(--c-${k});margin-right:6px"></span>`}${v}</button>`).join("")+`<input type="search" id="q" placeholder="Search" aria-label="Search">`;
 $("nav").onclick=e=>{const k=e.target.dataset.k;if(!k)return;cat=k;document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));render()};
 $("q").oninput=e=>{q=e.target.value.toLowerCase();render()};
 $("tog").onclick=()=>{full=!full;render()};
 fetch("data/deadlines.json").then(r=>r.json()).then(d=>{
-  all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
+  venues=d.venues||{};all=d.entries.map(e=>{const ap=e.precision==="month";return{...e,ap,minor:MINOR.test(e.label),ts:e.date?new Date(ap?e.date+"-28T23:59:00-12:00":e.date).getTime():null}});
   $("sub").textContent="Conferences, shared tasks, schools and funding · updated "+d.generated.slice(0,10);
-  render();
+  render();openHash();
 }).catch(()=>{$("sub").textContent="Could not load the data. Open this page through GitHub Pages or a local web server."});
+
+const dlg=$("dlg");
+const cats={conference:"Conference",shared_task:"Shared task",school:"School",fellowship:"PhD & funding"};
+function open(key){
+  const g=all.filter(e=>e.venue+" "+e.year===key).sort((a,b)=>(a.ts??9e15)-(b.ts??9e15));
+  if(!g.length)return;
+  const e0=g[0],ev=g.find(e=>e.event_dates)?.event_dates,pl=g.find(e=>e.place)?.place;
+  let links=venues[key];
+  if(!links){const u=[...new Set(g.map(e=>e.link).filter(Boolean))];links=u.map((url,i)=>({label:i?"Link":"Website",url,primary:!i}))}
+  const now=Date.now(),nxt=g.find(e=>e.ts!=null&&!e.ap&&e.ts>=now);
+  const rows=g.map(e=>{
+    const when=e.ts==null?"Date TBA":e.ap?fmt(e.ts,{month:"long",year:"numeric"})+" (tentative)":fmt(e.ts,{weekday:"short",day:"numeric",month:"short",year:"numeric"});
+    const gone=e.ts!=null&&!e.ap&&e.ts<now;
+    return `<div class="tr${e===nxt?" now":""}${gone?" gone":""}"><span class="l">${esc(e.label)}</span><span class="r">${when}</span></div>`}).join("");
+  const notes=[...new Set(g.map(e=>e.note).filter(Boolean))];
+  dlg.innerHTML=`<div class="sheet"><button class="x" aria-label="Close">×</button>
+  <div class="kind"><span class="dot" style="background:var(--c-${e0.category})"></span>${cats[e0.category]||""}</div>
+  <h3>${esc(key)}</h3><div class="meta">${[ev&&"Event "+esc(ev),esc(pl)].filter(Boolean).join(" · ")}</div>
+  <div class="acts">${links.map(l=>`<a class="btn${l.primary?" p":""}" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>
+  <div class="tl"><h4>Timeline</h4>${rows}</div>
+  ${notes.length?`<div class="notes">${notes.map(esc).join("<br>")}</div>`:""}
+  <div class="note-aoe">Times are AoE (UTC−12) unless noted. Confirm on the official site.</div></div>`;
+  dlg.querySelector(".x").onclick=()=>dlg.close();
+  if(!dlg.open)dlg.showModal();
+  history.replaceState(null,"","#"+encodeURIComponent(key.replace(/ /g,"-")));
+}
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",()=>history.replaceState(null,"",location.pathname+location.search));
+$("list").addEventListener("click",e=>{const li=e.target.closest("li[data-k]");if(li)open(li.dataset.k)});
+$("list").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){const li=e.target.closest("li[data-k]");if(li){e.preventDefault();open(li.dataset.k)}}});
+$("next").addEventListener("click",()=>{const n=all.filter(e=>e.ts!=null&&!e.ap&&e.ts>=Date.now()&&!e.minor).sort((a,b)=>a.ts-b.ts)[0];if(n)open(n.venue+" "+n.year)});
+function openHash(){if(location.hash.length>1)open(decodeURIComponent(location.hash.slice(1)).replace(/-/g," "))}
 const AOE="Etc/GMT+12",fmt=(ts,o)=>new Date(ts).toLocaleDateString("en",{...o,timeZone:AOE});
 function cd(e){
   if(e.ap)return{t:"tentative"};
@@ -90,9 +146,9 @@ function cd(e){
 function item(e){
   const c=e.ts!=null?cd(e):null,past=c&&c.t==="passed";
   const date=e.ts==null?`<div class="date tba"><b>TBA</b></div>`:`<div class="date"><small>${fmt(e.ts,{month:"short"})}</small><b>${e.ap?"~":fmt(e.ts,{day:"numeric"})}</b></div>`;
-  const name=`<span class="dot" style="background:var(--c-${e.category})"></span>${esc(e.venue)} ${e.year}`,link=e.link?`<a href="${esc(e.link)}" target="_blank" rel="noopener">${name}</a>`:`<b>${name}</b>`;
+  const name=`<span class="dot" style="background:var(--c-${e.category})"></span>${esc(e.venue)} ${e.year}`,link=`<b>${name}</b>`;
   const det=[e.event_dates&&(e.ts==null?"":"Event ")+e.event_dates,e.place,e.note].filter(Boolean).join(" · ");
-  return `<li class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:""}</li>`;
+  return `<li tabindex="0" role="button" data-k="${esc(e.venue+" "+e.year)}" class="${past?"past":""}">${date}<div class="t">${link} <span class="w">${esc(e.label)}</span>${det?`<div class="d">${esc(det)}</div>`:""}</div>${c?`<span class="cd${c.s?" soon":""}">${c.t}</span>`:""}</li>`;
 }
 function render(){
   const now=Date.now();
