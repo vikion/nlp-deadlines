@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T11:01:14Z",
+ "generated": "2026-10-02T10:34:18Z",
  "venues": {
   "ARR 2026": [
    {
@@ -1032,11 +1032,33 @@
   {
    "venue": "ACL",
    "year": 2026,
-   "label": "ARR submission; ACL commitment deadline: March 14, 2026.",
+   "label": "ARR October cycle",
+   "category": "conference",
+   "date": "2025-10-06T23:59:00-12:00",
+   "event_dates": "July 5-7, 2026",
+   "place": "San Diego, California, United States (Hybrid)",
+   "link": "https://2026.aclweb.org/",
+   "source": "ccf-deadlines"
+  },
+  {
+   "venue": "ACL",
+   "year": 2026,
+   "label": "ARR January cycle",
    "category": "conference",
    "date": "2026-01-05T23:59:59-12:00",
-   "event_dates": "July 2 - 7, 2026",
-   "place": "San Diego, California, United States",
+   "event_dates": "July 5-7, 2026",
+   "place": "San Diego, California, United States (Hybrid)",
+   "link": "https://2026.aclweb.org/",
+   "source": "ccf-deadlines"
+  },
+  {
+   "venue": "ACL",
+   "year": 2026,
+   "label": "ARR commitment; reviewed papers only",
+   "category": "conference",
+   "date": "2026-03-14T23:59:00-12:00",
+   "event_dates": "July 5-7, 2026",
+   "place": "San Diego, California, United States (Hybrid)",
    "link": "https://2026.aclweb.org/",
    "source": "ccf-deadlines"
   },
@@ -1134,7 +1156,7 @@
    "label": "Submission deadline",
    "category": "conference",
    "date": "2026-05-07T11:59:00+00:00",
-   "event_dates": "December 6-12 (Sydney), December 9-13 (Atlanta and Paris), 2026",
+   "event_dates": "December 8-10 (Sydney), December 9-11 (Atlanta and Paris), 2026",
    "place": "Sydney, Australia; Atlanta, USA; Paris, France",
    "link": "https://neurips.cc/Conferences/2026",
    "source": "ccf-deadlines"
