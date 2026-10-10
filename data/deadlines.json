@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T11:23:05Z",
+ "generated": "2026-10-10T10:40:30Z",
  "venues": {
   "ARR 2026": [
    {
@@ -1115,6 +1115,17 @@
    "event_dates": "August 18-21, 2026",
    "place": "Bremen, Germany",
    "link": "https://2026.ijcai.org/",
+   "source": "ccf-deadlines"
+  },
+  {
+   "venue": "IJCAI",
+   "year": 2027,
+   "label": "Separate satellite event: August 15-17, 2027, Hengqin, China",
+   "category": "conference",
+   "date": "2027-01-11T23:59:00-12:00",
+   "event_dates": "August 7-13, 2027",
+   "place": "Kyoto, Japan",
+   "link": "https://2027.ijcai.org/",
    "source": "ccf-deadlines"
   },
   {
