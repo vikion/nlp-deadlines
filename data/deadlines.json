@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T11:21:09Z",
+ "generated": "2026-11-02T12:36:10Z",
  "venues": {
   "ARR 2026": [
    {
@@ -1122,7 +1122,7 @@
    "year": 2027,
    "label": "Separate satellite event: August 15-17, 2027, Hengqin, China",
    "category": "conference",
-   "date": "2027-01-11T23:59:00-12:00",
+   "date": "2027-01-11T23:59:59-12:00",
    "event_dates": "August 7-13, 2027",
    "place": "Kyoto, Japan",
    "link": "https://2027.ijcai.org/",
@@ -1166,7 +1166,7 @@
    "year": 2026,
    "label": "Submission deadline",
    "category": "conference",
-   "date": "2026-05-07T11:59:00+00:00",
+   "date": "2026-05-07T11:59:59+00:00",
    "event_dates": "December 8-10 (Sydney), December 9-11 (Atlanta and Paris), 2026",
    "place": "Sydney, Australia; Atlanta, USA; Paris, France",
    "link": "https://neurips.cc/Conferences/2026",
