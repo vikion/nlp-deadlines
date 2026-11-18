@@ -307,6 +307,50 @@
    "link": "https://www.aclweb.org/portal/content/joint-call-workshops-proposals-2027"
   },
   {
+   "venue": "VarDial",
+   "year": 2027,
+   "label": "Direct submission deadline",
+   "category": "conference",
+   "date": "2026-12-15T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027 (exact workshop date TBD)",
+   "place": "Athens, Greece (at EACL 2027, hybrid)",
+   "note": "Call gives no time/timezone; AoE assumed",
+   "link": "https://aclsigvar.org/vardial2027"
+  },
+  {
+   "venue": "VarDial",
+   "year": 2027,
+   "label": "Pre-reviewed (ARR) submission deadline",
+   "category": "conference",
+   "date": null,
+   "note": "Listed as TBD in the first call for papers",
+   "event_dates": "Mar 9–14, 2027 (exact workshop date TBD)",
+   "place": "Athens, Greece (at EACL 2027, hybrid)",
+   "link": "https://aclsigvar.org/vardial2027"
+  },
+  {
+   "venue": "VarDial",
+   "year": 2027,
+   "label": "Acceptance notification",
+   "category": "conference",
+   "date": "2027-01-20T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027 (exact workshop date TBD)",
+   "place": "Athens, Greece (at EACL 2027, hybrid)",
+   "note": "Call gives no time/timezone; AoE assumed",
+   "link": "https://aclsigvar.org/vardial2027"
+  },
+  {
+   "venue": "VarDial",
+   "year": 2027,
+   "label": "Camera-ready",
+   "category": "conference",
+   "date": "2027-01-29T23:59:00-12:00",
+   "event_dates": "Mar 9–14, 2027 (exact workshop date TBD)",
+   "place": "Athens, Greece (at EACL 2027, hybrid)",
+   "note": "Call gives no time/timezone; AoE assumed",
+   "link": "https://aclsigvar.org/vardial2027"
+  },
+  {
    "venue": "COLING",
    "year": 2027,
    "label": "Workshop paper deadline (default; workshops may differ)",
